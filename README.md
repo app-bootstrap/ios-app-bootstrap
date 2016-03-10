@@ -2,6 +2,8 @@
 
 A starting tutorial for iOS application with Swift.
 
+[native-in-practice](https://xudafeng.github.io/slide/archives/native-in-practice)
+
 ## build
 
 ```shell

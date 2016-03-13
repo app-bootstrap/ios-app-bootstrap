@@ -13,6 +13,7 @@ class WebviewController: UITabBarController, UIWebViewDelegate {
     var _urlString: String
     var _title: String
     var _webview = Webview()
+    var _loaded = false
     
     init(urlString: String, title: String, autoLoad: Bool) {
         _urlString = urlString
@@ -34,14 +35,21 @@ class WebviewController: UITabBarController, UIWebViewDelegate {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func viewWillAppear(animated: Bool) {
+        startLoad()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         _setTitle(_title)
         initView()
     }
     
-    internal func startLoad() {
-        _webview.loadURL(_urlString)
+    func startLoad() {
+        if (!_loaded) {
+            _webview.loadURL(_urlString)
+            _loaded = true
+        }
     }
     
     func initView() {

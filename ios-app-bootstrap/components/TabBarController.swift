@@ -12,7 +12,7 @@ class TabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.initViewControllers()
+        initViewControllers()
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -23,8 +23,8 @@ class TabBarController: UITabBarController {
     func initViewControllers() {
         let homeViewController = HomeViewController()
         let personalViewController = PersonalViewController()
-        let webViewController = WebviewController(urlString: Const.TEST, title: Const.WEBVIEW, autoLoad: true)
-        let testViewController = WebviewController(urlString: Const.TEST_URL, title: Const.TEST_TITLE, autoLoad: true)
+        let webViewController = WebviewController(urlString: Const.TEST, title: Const.WEBVIEW, autoLoad: false)
+        let testViewController = WebviewController(urlString: Const.TEST_URL, title: Const.TEST_TITLE, autoLoad: false)
         
         let homeNavViewController:UINavigationController = TabBarNavigation(rootViewController: homeViewController)
         let personalNavViewController:UINavigationController = TabBarNavigation(rootViewController: personalViewController)

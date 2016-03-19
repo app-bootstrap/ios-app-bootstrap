@@ -8,8 +8,12 @@
 
 import UIKit
 
-class PersonalViewController: ViewController {
+class PersonalViewController: ViewController , UIGestureRecognizerDelegate {
     
+    var layer: CAShapeLayer!
+    var timer: NSTimer!
+    var avatarWidth: CGFloat = 80
+
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = Const.PERSONAL
@@ -24,18 +28,78 @@ class PersonalViewController: ViewController {
         titleLabel.font = UIFont.systemFontOfSize(24)
         view.addSubview(titleLabel)
         
+        let avatarFeild = UIView()
+        avatarFeild.translatesAutoresizingMaskIntoConstraints = false
+
+        let avatar = UIImageView(frame: CGRectMake((view.frame.width - 100) / 2, 30, avatarWidth, avatarWidth))
+        avatar.image = UIImage(named: "avatar.png")
+        avatar.layer.masksToBounds = true
+        avatar.layer.cornerRadius = avatarWidth / 2
+
+        avatarFeild.addSubview(avatar)
+        
+        let path = UIBezierPath(arcCenter: avatar.center, radius: avatarWidth / 2, startAngle: CGFloat(-M_PI / 1.0), endAngle: CGFloat(M_PI / 1.0), clockwise: true)
+        
+        layer = CAShapeLayer()
+        layer.strokeColor = UIColor.blackColor().CGColor
+        layer.fillColor = UIColor.clearColor().CGColor
+        layer.lineCap = kCALineCapSquare
+        layer.path = path.CGPath
+        layer.lineWidth = 1.0
+        layer.strokeStart = 0.0
+        layer.strokeEnd = 0.0
+        
+        avatarFeild.layer.addSublayer(layer)
+        
+        startTimer(false)
+        
+        let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(PersonalViewController.longPressHandler(_:)))
+        longPressGesture.minimumPressDuration = 0.2
+        avatarFeild.addGestureRecognizer(longPressGesture)
+        
+        view.addSubview(avatarFeild)
+        
         let logoutButton = UIButton()
         logoutButton.backgroundColor = Utils.getRGB(Const.COLOR_1)
         logoutButton.setTitle("Logout", forState: UIControlState.Normal)
         logoutButton.translatesAutoresizingMaskIntoConstraints = false
         logoutButton.layer.cornerRadius = 2
-        logoutButton.addTarget(self, action: Selector("logout:"), forControlEvents: .TouchUpInside)
+        logoutButton.addTarget(self, action: #selector(PersonalViewController.logout(_:)), forControlEvents: .TouchUpInside)
         logoutButton.titleLabel!.font = UIFont(name: "Helvetica",size: 20)
         view.addSubview(logoutButton)
-        let views:Dictionary<String, AnyObject>=["logoutButton": logoutButton, "titleLabel": titleLabel]
-        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-100-[titleLabel(<=20)]-[logoutButton(<=40)]-100-|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
+        let views:Dictionary<String, AnyObject>=["logoutButton": logoutButton, "titleLabel": titleLabel, "avatarFeild": avatarFeild]
+        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-100-[titleLabel(<=20)]-[avatarFeild]-[logoutButton(<=40)]-100-|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
         view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|-[titleLabel]-|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
+        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|-[avatarFeild]-|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
         view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|-[logoutButton]-|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
+    }
+    
+    func startTimer(reverse: Bool) {
+        timer = NSTimer.scheduledTimerWithTimeInterval(0.05, target: self, selector: #selector(PersonalViewController.updateCircle), userInfo: nil, repeats: true)
+    }
+    
+    func stopTimer() {
+        timer.invalidate()
+        timer = nil
+    }
+    
+    func updateCircle() {
+        layer.strokeEnd += 0.01
+        
+        if layer.strokeEnd == 1 {
+            self.stopTimer()
+        }
+    }
+    
+    func longPressHandler(gestureRecognizer: UILongPressGestureRecognizer) {
+        
+        if gestureRecognizer.state == .Began {
+            stopTimer()
+        }
+        
+        if gestureRecognizer.state == .Ended {
+            startTimer(false)
+        }
     }
     
     func logout(sender: UIButton) {
@@ -43,7 +107,6 @@ class PersonalViewController: ViewController {
         let loginController = LoginViewController()
         navigationController?.presentViewController(loginController, animated: true, completion: nil)
     }
-    
-    
+
 }
 

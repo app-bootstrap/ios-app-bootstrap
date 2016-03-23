@@ -140,4 +140,20 @@ class Utils: NSObject {
         temp.removeObjectForKey(key)
         temp.synchronize()
     }
+    
+    class Path {
+        
+        static func basename(path: String) -> String {
+            return ((path as NSString).lastPathComponent as NSString).stringByDeletingPathExtension
+        }
+        
+        static func dirname(path: String) -> String {
+            return (path as NSString).stringByDeletingLastPathComponent
+        }
+        
+        static func extname(path: String) -> String {
+            return (path as NSString).pathExtension
+        }
+        
+    }
 }

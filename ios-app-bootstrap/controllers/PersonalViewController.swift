@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import Logger
 
 class PersonalViewController: ViewController , UIGestureRecognizerDelegate {
-    
+    let logger = Logger()
     var layer: CAShapeLayer!
     var timer: NSTimer!
     var avatarWidth: CGFloat = 80

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63445F4E1CA295E5004D153F /* OtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63445F4D1CA295E5004D153F /* OtherViewController.swift */; };
+		63445F501CA29969004D153F /* WKWebviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63445F4F1CA29969004D153F /* WKWebviewController.swift */; };
 		63894CB91B99736400464AB0 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63894CB81B99736400464AB0 /* TabBarController.swift */; };
 		63894CBC1B99758F00464AB0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63894CBB1B99758F00464AB0 /* HomeViewController.swift */; };
 		63894CBE1B99768300464AB0 /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63894CBD1B99768300464AB0 /* PersonalViewController.swift */; };
@@ -46,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		63445F4D1CA295E5004D153F /* OtherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherViewController.swift; sourceTree = "<group>"; };
+		63445F4F1CA29969004D153F /* WKWebviewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKWebviewController.swift; sourceTree = "<group>"; };
 		63894CB81B99736400464AB0 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		63894CBB1B99758F00464AB0 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		63894CBD1B99768300464AB0 /* PersonalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +120,7 @@
 				63894CB81B99736400464AB0 /* TabBarController.swift */,
 				63D638EA1C90394C005B1E61 /* WebViewController.swift */,
 				63894CD21B997D5400464AB0 /* Webview.swift */,
+				63445F4F1CA29969004D153F /* WKWebviewController.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -126,6 +131,7 @@
 				63894CBB1B99758F00464AB0 /* HomeViewController.swift */,
 				63894CBD1B99768300464AB0 /* PersonalViewController.swift */,
 				63D638E61C90224F005B1E61 /* LoginViewController.swift */,
+				63445F4D1CA295E5004D153F /* OtherViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -347,6 +353,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				63894CC01B99782700464AB0 /* Utils.swift in Sources */,
+				63445F4E1CA295E5004D153F /* OtherViewController.swift in Sources */,
 				63D638EB1C90394C005B1E61 /* WebViewController.swift in Sources */,
 				63894CB91B99736400464AB0 /* TabBarController.swift in Sources */,
 				63DA6D0E1B9941F600AFC15F /* AppDelegate.swift in Sources */,
@@ -356,6 +363,7 @@
 				63894CBE1B99768300464AB0 /* PersonalViewController.swift in Sources */,
 				63894CBC1B99758F00464AB0 /* HomeViewController.swift in Sources */,
 				63F96D7A1C841F7200C95604 /* Const.swift in Sources */,
+				63445F501CA29969004D153F /* WKWebviewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

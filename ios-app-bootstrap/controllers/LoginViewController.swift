@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import Logger
 
 class LoginViewController: ViewController, UITextFieldDelegate {
+    let logger = Logger()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,7 +63,7 @@ class LoginViewController: ViewController, UITextFieldDelegate {
         loginButton.translatesAutoresizingMaskIntoConstraints = false
         loginButton.layer.cornerRadius = 2
         loginButton.titleLabel!.font = UIFont(name: "Helvetica",size: 20)
-        loginButton.addTarget(self, action: Selector("login:"), forControlEvents: .TouchUpInside)
+        loginButton.addTarget(self, action: #selector(LoginViewController.login(_:)), forControlEvents: .TouchUpInside)
         view.addSubview(loginButton)
         
         let views:Dictionary<String, AnyObject>=["titleLabel": titleLabel, "userNameTextField": userNameTextField, "passwordTextField": passwordTextField, "loginButton": loginButton]
@@ -74,7 +76,7 @@ class LoginViewController: ViewController, UITextFieldDelegate {
     }
     
     func login(sender: UIButton) {
-        print("login")
+        logger.info("login")
         Utils.setData("login", value: "login")
         let tabBar = TabBarController()
         navigationController?.presentViewController(tabBar, animated: true, completion: nil)

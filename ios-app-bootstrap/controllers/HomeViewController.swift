@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import Logger
 
 class HomeViewController: ViewController {
+    let logger = Logger()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,6 +19,7 @@ class HomeViewController: ViewController {
     }
     
     func initView() {
+        logger.info("start init view")
         let titleLabel = UILabel()
         titleLabel.textAlignment = .Center
         titleLabel.translatesAutoresizingMaskIntoConstraints = false

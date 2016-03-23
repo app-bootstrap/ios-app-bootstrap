@@ -1,3 +1,4 @@
 github "SwiftyJSON/SwiftyJSON"
 github "Alamofire/Alamofire"
 github "krzyzanowskim/CryptoSwift"
+github "xudafeng/Logger.swift"

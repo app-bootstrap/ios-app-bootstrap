@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		63445F4E1CA295E5004D153F /* OtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63445F4D1CA295E5004D153F /* OtherViewController.swift */; };
 		63445F501CA29969004D153F /* WKWebviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63445F4F1CA29969004D153F /* WKWebviewController.swift */; };
+		6366BB5D1CA3A07B009311BD /* AnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6366BB5C1CA3A07B009311BD /* AnimationController.swift */; };
+		6366BB5F1CA3A213009311BD /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6366BB5E1CA3A213009311BD /* ProgressBarView.swift */; };
+		636A3AEF1CA4DC1A00D78C84 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636A3AEE1CA4DC1A00D78C84 /* Toast.swift */; };
+		636A3AF11CA4E13900D78C84 /* ToastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636A3AF01CA4E13900D78C84 /* ToastViewController.swift */; };
 		63894CB91B99736400464AB0 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63894CB81B99736400464AB0 /* TabBarController.swift */; };
 		63894CBC1B99758F00464AB0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63894CBB1B99758F00464AB0 /* HomeViewController.swift */; };
 		63894CBE1B99768300464AB0 /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63894CBD1B99768300464AB0 /* PersonalViewController.swift */; };
@@ -50,6 +54,10 @@
 /* Begin PBXFileReference section */
 		63445F4D1CA295E5004D153F /* OtherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherViewController.swift; sourceTree = "<group>"; };
 		63445F4F1CA29969004D153F /* WKWebviewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKWebviewController.swift; sourceTree = "<group>"; };
+		6366BB5C1CA3A07B009311BD /* AnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationController.swift; sourceTree = "<group>"; };
+		6366BB5E1CA3A213009311BD /* ProgressBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
+		636A3AEE1CA4DC1A00D78C84 /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		636A3AF01CA4E13900D78C84 /* ToastViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastViewController.swift; sourceTree = "<group>"; };
 		63894CB81B99736400464AB0 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		63894CBB1B99758F00464AB0 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		63894CBD1B99768300464AB0 /* PersonalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +129,10 @@
 				63D638EA1C90394C005B1E61 /* WebViewController.swift */,
 				63894CD21B997D5400464AB0 /* Webview.swift */,
 				63445F4F1CA29969004D153F /* WKWebviewController.swift */,
+				6366BB5C1CA3A07B009311BD /* AnimationController.swift */,
+				6366BB5E1CA3A213009311BD /* ProgressBarView.swift */,
+				636A3AEE1CA4DC1A00D78C84 /* Toast.swift */,
+				636A3AF01CA4E13900D78C84 /* ToastViewController.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -359,11 +371,15 @@
 				63DA6D0E1B9941F600AFC15F /* AppDelegate.swift in Sources */,
 				63D638E91C90233F005B1E61 /* ViewController.swift in Sources */,
 				63894CD31B997D5400464AB0 /* Webview.swift in Sources */,
+				636A3AEF1CA4DC1A00D78C84 /* Toast.swift in Sources */,
 				63D638E71C90224F005B1E61 /* LoginViewController.swift in Sources */,
 				63894CBE1B99768300464AB0 /* PersonalViewController.swift in Sources */,
 				63894CBC1B99758F00464AB0 /* HomeViewController.swift in Sources */,
 				63F96D7A1C841F7200C95604 /* Const.swift in Sources */,
 				63445F501CA29969004D153F /* WKWebviewController.swift in Sources */,
+				6366BB5D1CA3A07B009311BD /* AnimationController.swift in Sources */,
+				636A3AF11CA4E13900D78C84 /* ToastViewController.swift in Sources */,
+				6366BB5F1CA3A213009311BD /* ProgressBarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

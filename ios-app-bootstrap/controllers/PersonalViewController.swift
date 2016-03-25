@@ -91,7 +91,7 @@ class PersonalViewController: ViewController , UIGestureRecognizerDelegate {
             self.stopTimer()
         }
     }
-    
+
     func longPressHandler(gestureRecognizer: UILongPressGestureRecognizer) {
         
         if gestureRecognizer.state == .Began {

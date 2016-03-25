@@ -89,13 +89,14 @@ class ProgressBarView: UIView {
     
     override func drawRect(rect: CGRect) {
         logger.info("drawRect")
+        let lineWidth: CGFloat = 1
         let context = UIGraphicsGetCurrentContext()
         CGContextClearRect(context, rect)
         CGContextSaveGState(context)
         CGContextBeginPath(context)
         CGContextSetStrokeColor(context, CGColorGetComponents(UIColor.blueColor().CGColor))
-        CGContextAddArc(context, self.frame.width / 2, self.frame.height / 2, self.frame.width / 2, 0, CGFloat(currentProgress / 180 * CGFloat(M_PI)), reverseCache ? 1 : 0)
-        CGContextSetLineWidth(context, 1)
+        CGContextAddArc(context, self.frame.width / 2 + lineWidth, self.frame.height / 2 + lineWidth, self.frame.width / 2 - lineWidth * 2, 0, CGFloat(currentProgress / 180 * CGFloat(M_PI)), reverseCache ? 1 : 0)
+        CGContextSetLineWidth(context, lineWidth)
         CGContextStrokePath(context)
         CGContextRestoreGState(context)
     }

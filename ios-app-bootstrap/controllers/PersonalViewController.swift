@@ -85,11 +85,11 @@ class PersonalViewController: ViewController , UIGestureRecognizerDelegate {
     }
     
     func updateCircle() {
-        layer.strokeEnd += 0.01
-        
-        if layer.strokeEnd == 1 {
+        if layer.strokeEnd > 1.0 {
             self.stopTimer()
+            return
         }
+        layer.strokeEnd += 0.01
     }
 
     func longPressHandler(gestureRecognizer: UILongPressGestureRecognizer) {

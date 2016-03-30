@@ -14,11 +14,21 @@ class PersonalViewController: ViewController , UIGestureRecognizerDelegate {
     var layer: CAShapeLayer!
     var timer: NSTimer!
     var avatarWidth: CGFloat = 80
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = Const.PERSONAL
+        initNotification()
         initView()
+    }
+    
+    func initNotification() {
+        let notificationCenter = NSNotificationCenter.defaultCenter()
+        let operationQueue = NSOperationQueue.mainQueue()
+        let applicationDidEnterBackgroundObserver = notificationCenter.addObserverForName(UIApplicationDidEnterBackgroundNotification, object: nil, queue: operationQueue, usingBlock: {
+            (notification: NSNotification!) in self.logger.info("run in background frome Personal")
+        })
+        //notificationCenter.removeObserver(applicationDidEnterBackgroundObserver)
     }
     
     func initView() {
@@ -31,12 +41,12 @@ class PersonalViewController: ViewController , UIGestureRecognizerDelegate {
         
         let avatarFeild = UIView()
         avatarFeild.translatesAutoresizingMaskIntoConstraints = false
-
+        
         let avatar = UIImageView(frame: CGRectMake((view.frame.width - 100) / 2, 30, avatarWidth, avatarWidth))
         avatar.image = UIImage(named: "avatar.png")
         avatar.layer.masksToBounds = true
         avatar.layer.cornerRadius = avatarWidth / 2
-
+        
         avatarFeild.addSubview(avatar)
         
         let path = UIBezierPath(arcCenter: avatar.center, radius: avatarWidth / 2, startAngle: CGFloat(-M_PI / 1.0), endAngle: CGFloat(M_PI / 1.0), clockwise: true)
@@ -85,13 +95,13 @@ class PersonalViewController: ViewController , UIGestureRecognizerDelegate {
     }
     
     func updateCircle() {
-        layer.strokeEnd += 0.01
-        
-        if layer.strokeEnd == 1 {
+        if layer.strokeEnd > 1.0 {
             self.stopTimer()
+            return
         }
+        layer.strokeEnd += 0.01
     }
-
+    
     func longPressHandler(gestureRecognizer: UILongPressGestureRecognizer) {
         
         if gestureRecognizer.state == .Began {
@@ -108,6 +118,6 @@ class PersonalViewController: ViewController , UIGestureRecognizerDelegate {
         let loginController = LoginViewController()
         navigationController?.presentViewController(loginController, animated: true, completion: nil)
     }
-
+    
 }
 

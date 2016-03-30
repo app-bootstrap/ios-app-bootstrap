@@ -15,7 +15,16 @@ class HomeViewController: ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = Const.HOME
+        initNotification()
         initView()
+    }
+    
+    func initNotification() {
+        let notificationCenter = NSNotificationCenter.defaultCenter()
+        let operationQueue = NSOperationQueue.mainQueue()
+        let applicationDidEnterBackgroundObserver = notificationCenter.addObserverForName(UIApplicationDidEnterBackgroundNotification, object: nil, queue: operationQueue, usingBlock: {
+            (notification: NSNotification!) in self.logger.info("run in background from Home")
+        })
     }
     
     func initView() {

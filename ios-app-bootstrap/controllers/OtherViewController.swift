@@ -11,7 +11,7 @@ import Logger
 
 class OtherViewController: UITableViewController {
     let logger = Logger()
-    let list = ["WKWebview", "Toast", "Animation"]
+    let list = ["WKWebview", "Toast", "Animation", "MVC", "MVP", "MVVM"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,6 +61,23 @@ class OtherViewController: UITableViewController {
             controller = AnimationController()
         case "Toast":
             controller = ToastViewController()
+        case "MVC":
+            let model = Model1(site: "xdf.me", githubId: "xudafeng")
+            let view = ViewControllerSample1()
+            view.data = model
+            controller = view
+        case "MVP":
+            let model = Model2(site: "xdf.me", githubId: "xudafeng")
+            let view = ViewControllerSample2()
+            let presenter = PresenterSample2(view: view, model: model)
+            view.presenter = presenter
+            controller = view
+        case "MVVM":
+            let model = Model3(site: "xdf.me", githubId: "xudafeng")
+            let viewModel = ViewModelSample3(model: model)
+            let view = ViewControllerSample3()
+            view.viewModel = viewModel
+            controller = view
         default:
             controller = WKWebviewController()
         }

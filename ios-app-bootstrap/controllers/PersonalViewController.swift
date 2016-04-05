@@ -25,7 +25,7 @@ class PersonalViewController: ViewController , UIGestureRecognizerDelegate {
     func initNotification() {
         let notificationCenter = NSNotificationCenter.defaultCenter()
         let operationQueue = NSOperationQueue.mainQueue()
-        let applicationDidEnterBackgroundObserver = notificationCenter.addObserverForName(UIApplicationDidEnterBackgroundNotification, object: nil, queue: operationQueue, usingBlock: {
+        _ = notificationCenter.addObserverForName(UIApplicationDidEnterBackgroundNotification, object: nil, queue: operationQueue, usingBlock: {
             (notification: NSNotification!) in self.logger.info("run in background frome Personal")
         })
         //notificationCenter.removeObserver(applicationDidEnterBackgroundObserver)

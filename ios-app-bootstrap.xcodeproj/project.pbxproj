@@ -13,6 +13,9 @@
 		6366BB5F1CA3A213009311BD /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6366BB5E1CA3A213009311BD /* ProgressBarView.swift */; };
 		636A3AEF1CA4DC1A00D78C84 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636A3AEE1CA4DC1A00D78C84 /* Toast.swift */; };
 		636A3AF11CA4E13900D78C84 /* ToastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636A3AF01CA4E13900D78C84 /* ToastViewController.swift */; };
+		638317D91CB35D5F00EF3EF5 /* mvc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638317D61CB35D5F00EF3EF5 /* mvc.swift */; };
+		638317DA1CB35D5F00EF3EF5 /* mvp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638317D71CB35D5F00EF3EF5 /* mvp.swift */; };
+		638317DB1CB35D5F00EF3EF5 /* mvvm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638317D81CB35D5F00EF3EF5 /* mvvm.swift */; };
 		63894CB91B99736400464AB0 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63894CB81B99736400464AB0 /* TabBarController.swift */; };
 		63894CBC1B99758F00464AB0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63894CBB1B99758F00464AB0 /* HomeViewController.swift */; };
 		63894CBE1B99768300464AB0 /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63894CBD1B99768300464AB0 /* PersonalViewController.swift */; };
@@ -58,6 +61,9 @@
 		6366BB5E1CA3A213009311BD /* ProgressBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
 		636A3AEE1CA4DC1A00D78C84 /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		636A3AF01CA4E13900D78C84 /* ToastViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastViewController.swift; sourceTree = "<group>"; };
+		638317D61CB35D5F00EF3EF5 /* mvc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = mvc.swift; path = patterns/mvc.swift; sourceTree = "<group>"; };
+		638317D71CB35D5F00EF3EF5 /* mvp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = mvp.swift; path = patterns/mvp.swift; sourceTree = "<group>"; };
+		638317D81CB35D5F00EF3EF5 /* mvvm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = mvvm.swift; path = patterns/mvvm.swift; sourceTree = "<group>"; };
 		63894CB81B99736400464AB0 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		63894CBB1B99758F00464AB0 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		63894CBD1B99768300464AB0 /* PersonalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +118,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		638317D51CB35D5500EF3EF5 /* patterns */ = {
+			isa = PBXGroup;
+			children = (
+				638317D61CB35D5F00EF3EF5 /* mvc.swift */,
+				638317D71CB35D5F00EF3EF5 /* mvp.swift */,
+				638317D81CB35D5F00EF3EF5 /* mvvm.swift */,
+			);
+			name = patterns;
+			sourceTree = "<group>";
+		};
 		63894CB61B99716200464AB0 /* common */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +200,7 @@
 		63DA6D0A1B9941F600AFC15F /* ios-app-bootstrap */ = {
 			isa = PBXGroup;
 			children = (
+				638317D51CB35D5500EF3EF5 /* patterns */,
 				63D638DD1C90103C005B1E61 /* res */,
 				63F96D7B1C84202B00C95604 /* static */,
 				63894CBA1B99754F00464AB0 /* controllers */,
@@ -364,8 +381,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				638317DB1CB35D5F00EF3EF5 /* mvvm.swift in Sources */,
 				63894CC01B99782700464AB0 /* Utils.swift in Sources */,
 				63445F4E1CA295E5004D153F /* OtherViewController.swift in Sources */,
+				638317D91CB35D5F00EF3EF5 /* mvc.swift in Sources */,
 				63D638EB1C90394C005B1E61 /* WebViewController.swift in Sources */,
 				63894CB91B99736400464AB0 /* TabBarController.swift in Sources */,
 				63DA6D0E1B9941F600AFC15F /* AppDelegate.swift in Sources */,
@@ -374,6 +393,7 @@
 				636A3AEF1CA4DC1A00D78C84 /* Toast.swift in Sources */,
 				63D638E71C90224F005B1E61 /* LoginViewController.swift in Sources */,
 				63894CBE1B99768300464AB0 /* PersonalViewController.swift in Sources */,
+				638317DA1CB35D5F00EF3EF5 /* mvp.swift in Sources */,
 				63894CBC1B99758F00464AB0 /* HomeViewController.swift in Sources */,
 				63F96D7A1C841F7200C95604 /* Const.swift in Sources */,
 				63445F501CA29969004D153F /* WKWebviewController.swift in Sources */,

@@ -25,7 +25,7 @@ protocol ViewPresenterSample2 {
 class PresenterSample2 : ViewPresenterSample2 {
     unowned let view: ViewSample2
     let model: Model2
-
+    
     required init(view: ViewSample2, model: Model2) {
         self.view = view
         self.model = model
@@ -54,7 +54,7 @@ class ViewControllerSample2: UIViewController, ViewSample2 {
     func setData(data: String) {
         titleLabel.text = data
     }
-
+    
     func initView() {
         navigationItem.title = Utils.Path.basename(#file)
         button.addTarget(self, action: #selector(ViewControllerSample1.didTapButton(_:)), forControlEvents: .TouchUpInside)

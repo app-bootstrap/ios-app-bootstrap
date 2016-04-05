@@ -14,7 +14,7 @@ struct Model1 {
 }
 
 class ViewControllerSample1: UIViewController {
-
+    
     var data: Model1!
     let button = UIButton()
     let titleLabel = UILabel()

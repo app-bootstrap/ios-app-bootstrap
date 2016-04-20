@@ -1,4 +1,4 @@
-language: swift
-osx_image: xcode7.3
+language: objective-c
+osx_image: xcode7.2
 script:
-  - make test
+  - xctool test -project ios-app-bootstrap.xcodeproj -scheme ios-app-bootstrap -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO

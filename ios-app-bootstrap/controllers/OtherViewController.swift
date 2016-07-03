@@ -11,7 +11,7 @@ import Logger
 
 class OtherViewController: UITableViewController {
     let logger = Logger()
-    let list = ["WKWebview", "Toast", "Animation", "MVC", "MVP", "MVVM"]
+    let list = ["WKWebview", "Toast", "Animation", "MVC", "MVP", "MVVM","Macaca Test Swipe API","Macaca Test Swipe API","Macaca Test Swipe API","Macaca Test Swipe API","Macaca Test Swipe API","Macaca Test Swipe API","Macaca Test Swipe API","Macaca Test Swipe API","Macaca Test Swipe API","Macaca Test Swipe API","Macaca Test Swipe API","Macaca Test Swipe API","Macaca Test Swipe API","Macaca Test Swipe API","Macaca Test Swipe API","Macaca Test Swipe API","Macaca Test Swipe API"]
     
     override func viewDidLoad() {
         super.viewDidLoad()

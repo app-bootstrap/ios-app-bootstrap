@@ -20,39 +20,39 @@ class HomeViewController: ViewController {
     }
     
     func initNotification() {
-        let notificationCenter = NSNotificationCenter.defaultCenter()
-        let operationQueue = NSOperationQueue.mainQueue()
-        _ = notificationCenter.addObserverForName(UIApplicationDidEnterBackgroundNotification, object: nil, queue: operationQueue, usingBlock: {
-            (notification: NSNotification!) in self.logger.info("run in background from Home")
+        let notificationCenter = NotificationCenter.default
+        let operationQueue = OperationQueue.main
+        _ = notificationCenter.addObserver(forName: NSNotification.Name.UIApplicationDidEnterBackground, object: nil, queue: operationQueue, using: {
+            (notification: Notification!) in self.logger.info("run in background from Home")
         })
     }
     
     func initView() {
         logger.info("start init view")
         let titleLabel = UILabel()
-        titleLabel.textAlignment = .Center
+        titleLabel.textAlignment = .center
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.text = Const.TITLE
-        titleLabel.font = UIFont.systemFontOfSize(24)
+        titleLabel.font = UIFont.systemFont(ofSize: 24)
         view.addSubview(titleLabel)
         
         let button = UIButton()
         button.backgroundColor = Utils.getRGB(Const.COLOR_1)
-        button.setTitle("list", forState: UIControlState.Normal)
+        button.setTitle("list", for: UIControlState())
         button.translatesAutoresizingMaskIntoConstraints = false
         button.layer.cornerRadius = 2
         button.titleLabel!.font = UIFont(name: "Helvetica",size: 20)
-        button.addTarget(self, action: #selector(HomeViewController.goList(_:)), forControlEvents: .TouchUpInside)
+        button.addTarget(self, action: #selector(HomeViewController.goList(_:)), for: .touchUpInside)
         view.addSubview(button)
 
         let views:Dictionary<String, AnyObject>=["titleLabel": titleLabel, "button": button]
         
-        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-100-[titleLabel(<=20)]-[button(<=40)]-100-|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
-        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|-[titleLabel]-|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
-        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|-[button]-|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-100-[titleLabel(<=20)]-[button(<=40)]-100-|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[titleLabel]-|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[button]-|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
     }
     
-    func goList(sender: UIButton) {
+    func goList(_ sender: UIButton) {
         navigationController?.pushViewController(OtherViewController(), animated: true)
     }
 }

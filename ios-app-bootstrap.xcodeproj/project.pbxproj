@@ -24,7 +24,6 @@
 		63B458F61C9F06300074F4CE /* Logger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63B458F51C9F06300074F4CE /* Logger.framework */; };
 		63D5C3F31C9980B1008DE710 /* avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 63D5C3F21C9980B1008DE710 /* avatar.png */; };
 		63D638D91C900F55005B1E61 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D638D71C900F55005B1E61 /* CryptoSwift.framework */; };
-		63D638DA1C900F55005B1E61 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D638D81C900F55005B1E61 /* SwiftyJSON.framework */; };
 		63D638DC1C900FA9005B1E61 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D638DB1C900FA9005B1E61 /* Alamofire.framework */; };
 		63D638E21C901046005B1E61 /* tab_home_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 63D638DE1C901046005B1E61 /* tab_home_btn@2x.png */; };
 		63D638E31C901046005B1E61 /* tab_home_selected_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 63D638DF1C901046005B1E61 /* tab_home_selected_btn@2x.png */; };
@@ -72,7 +71,6 @@
 		63B458F51C9F06300074F4CE /* Logger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Logger.framework; path = Carthage/Build/iOS/Logger.framework; sourceTree = "<group>"; };
 		63D5C3F21C9980B1008DE710 /* avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = avatar.png; path = res/avatar.png; sourceTree = "<group>"; };
 		63D638D71C900F55005B1E61 /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = Carthage/Build/iOS/CryptoSwift.framework; sourceTree = "<group>"; };
-		63D638D81C900F55005B1E61 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		63D638DB1C900FA9005B1E61 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		63D638DE1C901046005B1E61 /* tab_home_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tab_home_btn@2x.png"; path = "res/tab_home_btn@2x.png"; sourceTree = "<group>"; };
 		63D638DF1C901046005B1E61 /* tab_home_selected_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tab_home_selected_btn@2x.png"; path = "res/tab_home_selected_btn@2x.png"; sourceTree = "<group>"; };
@@ -103,7 +101,6 @@
 			files = (
 				63B458F61C9F06300074F4CE /* Logger.framework in Frameworks */,
 				63D638D91C900F55005B1E61 /* CryptoSwift.framework in Frameworks */,
-				63D638DA1C900F55005B1E61 /* SwiftyJSON.framework in Frameworks */,
 				63D638DC1C900FA9005B1E61 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -246,7 +243,6 @@
 				63B458F51C9F06300074F4CE /* Logger.framework */,
 				63D638DB1C900FA9005B1E61 /* Alamofire.framework */,
 				63D638D71C900F55005B1E61 /* CryptoSwift.framework */,
-				63D638D81C900F55005B1E61 /* SwiftyJSON.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -297,11 +293,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "open source";
 				TargetAttributes = {
 					63DA6D071B9941F600AFC15F = {
 						CreatedOnToolsVersion = 6.4;
+						LastSwiftMigration = 0800;
 					};
 					63DA6D1C1B9941F600AFC15F = {
 						CreatedOnToolsVersion = 6.4;
@@ -365,7 +362,6 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/CryptoSwift.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Logger.framework",
 			);
 			outputPaths = (
@@ -454,8 +450,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -499,8 +497,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -519,6 +519,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -537,6 +538,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "xudafeng.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -554,6 +556,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "xudafeng.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

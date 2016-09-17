@@ -12,7 +12,7 @@ import Logger
 class PersonalViewController: ViewController , UIGestureRecognizerDelegate {
     let logger = Logger()
     var layer: CAShapeLayer!
-    var timer: NSTimer!
+    var timer: Timer!
     var avatarWidth: CGFloat = 80
     
     override func viewDidLoad() {
@@ -23,26 +23,26 @@ class PersonalViewController: ViewController , UIGestureRecognizerDelegate {
     }
     
     func initNotification() {
-        let notificationCenter = NSNotificationCenter.defaultCenter()
-        let operationQueue = NSOperationQueue.mainQueue()
-        _ = notificationCenter.addObserverForName(UIApplicationDidEnterBackgroundNotification, object: nil, queue: operationQueue, usingBlock: {
-            (notification: NSNotification!) in self.logger.info("run in background frome Personal")
+        let notificationCenter = NotificationCenter.default
+        let operationQueue = OperationQueue.main
+        _ = notificationCenter.addObserver(forName: NSNotification.Name.UIApplicationDidEnterBackground, object: nil, queue: operationQueue, using: {
+            (notification: Notification!) in self.logger.info("run in background frome Personal")
         })
         //notificationCenter.removeObserver(applicationDidEnterBackgroundObserver)
     }
     
     func initView() {
         let titleLabel = UILabel()
-        titleLabel.textAlignment = .Center
+        titleLabel.textAlignment = .center
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.text = Const.TITLE
-        titleLabel.font = UIFont.systemFontOfSize(24)
+        titleLabel.font = UIFont.systemFont(ofSize: 24)
         view.addSubview(titleLabel)
         
         let avatarFeild = UIView()
         avatarFeild.translatesAutoresizingMaskIntoConstraints = false
         
-        let avatar = UIImageView(frame: CGRectMake((view.frame.width - 100) / 2, 30, avatarWidth, avatarWidth))
+        let avatar = UIImageView(frame: CGRect(x: (view.frame.width - 100) / 2, y: 30, width: avatarWidth, height: avatarWidth))
         avatar.image = UIImage(named: "avatar.png")
         avatar.layer.masksToBounds = true
         avatar.layer.cornerRadius = avatarWidth / 2
@@ -52,10 +52,10 @@ class PersonalViewController: ViewController , UIGestureRecognizerDelegate {
         let path = UIBezierPath(arcCenter: avatar.center, radius: avatarWidth / 2, startAngle: CGFloat(-M_PI / 1.0), endAngle: CGFloat(M_PI / 1.0), clockwise: true)
         
         layer = CAShapeLayer()
-        layer.strokeColor = UIColor.blackColor().CGColor
-        layer.fillColor = UIColor.clearColor().CGColor
+        layer.strokeColor = UIColor.black.cgColor
+        layer.fillColor = UIColor.clear.cgColor
         layer.lineCap = kCALineCapSquare
-        layer.path = path.CGPath
+        layer.path = path.cgPath
         layer.lineWidth = 1.0
         layer.strokeStart = 0.0
         layer.strokeEnd = 0.0
@@ -72,21 +72,21 @@ class PersonalViewController: ViewController , UIGestureRecognizerDelegate {
         
         let logoutButton = UIButton()
         logoutButton.backgroundColor = Utils.getRGB(Const.COLOR_1)
-        logoutButton.setTitle("Logout", forState: UIControlState.Normal)
+        logoutButton.setTitle("Logout", for: UIControlState())
         logoutButton.translatesAutoresizingMaskIntoConstraints = false
         logoutButton.layer.cornerRadius = 2
-        logoutButton.addTarget(self, action: #selector(PersonalViewController.logout(_:)), forControlEvents: .TouchUpInside)
+        logoutButton.addTarget(self, action: #selector(PersonalViewController.logout(_:)), for: .touchUpInside)
         logoutButton.titleLabel!.font = UIFont(name: "Helvetica",size: 20)
         view.addSubview(logoutButton)
         let views:Dictionary<String, AnyObject>=["logoutButton": logoutButton, "titleLabel": titleLabel, "avatarFeild": avatarFeild]
-        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-100-[titleLabel(<=20)]-[avatarFeild]-[logoutButton(<=40)]-100-|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
-        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|-[titleLabel]-|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
-        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|-[avatarFeild]-|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
-        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|-[logoutButton]-|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-100-[titleLabel(<=20)]-[avatarFeild]-[logoutButton(<=40)]-100-|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[titleLabel]-|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[avatarFeild]-|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[logoutButton]-|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
     }
     
-    func startTimer(reverse: Bool) {
-        timer = NSTimer.scheduledTimerWithTimeInterval(0.05, target: self, selector: #selector(PersonalViewController.updateCircle), userInfo: nil, repeats: true)
+    func startTimer(_ reverse: Bool) {
+        timer = Timer.scheduledTimer(timeInterval: 0.05, target: self, selector: #selector(PersonalViewController.updateCircle), userInfo: nil, repeats: true)
     }
     
     func stopTimer() {
@@ -102,21 +102,21 @@ class PersonalViewController: ViewController , UIGestureRecognizerDelegate {
         layer.strokeEnd += 0.01
     }
     
-    func longPressHandler(gestureRecognizer: UILongPressGestureRecognizer) {
+    func longPressHandler(_ gestureRecognizer: UILongPressGestureRecognizer) {
         
-        if gestureRecognizer.state == .Began {
+        if gestureRecognizer.state == .began {
             stopTimer()
         }
         
-        if gestureRecognizer.state == .Ended {
+        if gestureRecognizer.state == .ended {
             startTimer(false)
         }
     }
     
-    func logout(sender: UIButton) {
+    func logout(_ sender: UIButton) {
         Utils.removeData("login")
         let loginController = LoginViewController()
-        navigationController?.presentViewController(loginController, animated: true, completion: nil)
+        navigationController?.present(loginController, animated: true, completion: nil)
     }
     
 }

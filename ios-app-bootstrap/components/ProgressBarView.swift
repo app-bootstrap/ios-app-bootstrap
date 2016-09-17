@@ -13,7 +13,7 @@ class ProgressBarView: UIView {
     let logger = Logger()
     var currentProgress: CGFloat = 0
     var lastProgress: CGFloat = 0
-    var timer: NSTimer!
+    var timer: Timer!
     var isReverse = false
     var reverseCache = false
     
@@ -28,7 +28,7 @@ class ProgressBarView: UIView {
     }
     
     func initView() {
-        backgroundColor = UIColor.clearColor()
+        backgroundColor = UIColor.clear
     }
     
     func update() {
@@ -76,7 +76,7 @@ class ProgressBarView: UIView {
         if ((timer) != nil) {
             return
         }
-        timer = NSTimer.scheduledTimerWithTimeInterval(0.016, target: self, selector: #selector(ProgressBarView.update), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 0.016, target: self, selector: #selector(ProgressBarView.update), userInfo: nil, repeats: true)
     }
     
     func stopTimer() {
@@ -87,17 +87,17 @@ class ProgressBarView: UIView {
         timer = nil
     }
     
-    override func drawRect(rect: CGRect) {
+    override func draw(_ rect: CGRect) {
         logger.info("drawRect")
         let lineWidth: CGFloat = 1
         let context = UIGraphicsGetCurrentContext()
-        CGContextClearRect(context, rect)
-        CGContextSaveGState(context)
-        CGContextBeginPath(context)
-        CGContextSetStrokeColor(context, CGColorGetComponents(UIColor.blueColor().CGColor))
-        CGContextAddArc(context, self.frame.width / 2 + lineWidth, self.frame.height / 2 + lineWidth, self.frame.width / 2 - lineWidth * 2, 0, CGFloat(currentProgress / 180 * CGFloat(M_PI)), reverseCache ? 1 : 0)
-        CGContextSetLineWidth(context, lineWidth)
-        CGContextStrokePath(context)
-        CGContextRestoreGState(context)
+        context?.clear(rect)
+        context?.saveGState()
+        context?.beginPath()
+        context?.setStrokeColor(UIColor.blue.cgColor.components!)
+        context?.addArc(center: CGPoint(x: self.frame.width / 2 + lineWidth, y: self.frame.height / 2 + lineWidth), radius: self.frame.width / 2 - lineWidth * 2, startAngle: 0, endAngle: CGFloat(currentProgress / 180 * CGFloat(M_PI)), clockwise: reverseCache)
+        context?.setLineWidth(lineWidth)
+        context?.strokePath()
+        context?.restoreGState()
     }
 }

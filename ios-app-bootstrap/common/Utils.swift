@@ -7,151 +7,134 @@
 //
 
 import UIKit
-import SwiftyJSON
 
 class Utils: NSObject {
 
-    class func getImgView(ImgName: NSString)->UIImage{
-        
+    class func getImgView(_ ImgName: NSString)->UIImage{
         var image:UIImage = UIImage(named: ImgName as String)!
-        
-        image = image.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
-        
+        image = image.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
         return image
     }
     
-    class func matchesForRegexInText(regex: String!, text: String!) -> [String] {
+    class func matchesForRegexInText(_ regex: String!, text: String!) -> [String] {
         do {
             let regex = try NSRegularExpression(pattern: regex, options: [])
             let nsString = text as NSString
-            let results = regex.matchesInString(text,
+            let results = regex.matches(in: text,
                 options: [], range: NSMakeRange(0, nsString.length))
-            return results.map { nsString.substringWithRange($0.range)}
+            return results.map { nsString.substring(with: $0.range)}
         } catch let error as NSError {
             print("invalid regex: \(error.localizedDescription)")
             return []
         }
     }
     
-    class func parseQuery(querystring: String) -> [String: String] {
-        var query = [String: String]()
-        
-        for qs in querystring.componentsSeparatedByString("&") {
-            let key = qs.componentsSeparatedByString("=")[0]
-            var value = qs.componentsSeparatedByString("=")[1]
-            value = value.stringByReplacingOccurrencesOfString("+", withString: " ")
-            value = value.stringByRemovingPercentEncoding!
-            query[key] = value
-        }
-        return query
-    }
-    
-    class func getValueFromQuery(queryStrings: [String: String], key: String) -> String {
-        let data = String(queryStrings["data"]!)
-        let dataString = data.stringByRemovingPercentEncoding!
-        let _dataString = dataString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
-        let json = JSON(data: _dataString!)
-        let value = String(json[key])
-        return value
-    }
-    
-    class func test(reg: String, content: String) -> Bool {
+    class func test(_ reg: String, content: String) -> Bool {
         let regextestmobile = NSPredicate(format: "SELF MATCHES %@", reg)
-        return Bool(regextestmobile.evaluateWithObject(content))
+        return Bool(regextestmobile.evaluate(with: content))
     }
     
-    class func isMobileNo(content: String) -> Bool {
+    class func isMobileNo(_ content: String) -> Bool {
         return test("^1(3[0-9]|5[0-35-9]|8[025-9])\\d{8}$", content: content)
     }
     
-    class func debug(content: String) {
+    class func debug(_ content: String) {
         print("debug: " + content)
     }
     
-    class func parseJSON(string: String) -> AnyObject {
+    class func parseJSON(_ string: String) -> AnyObject {
         do {
-            let data = string.dataUsingEncoding(NSUTF8StringEncoding)
-            let res = try NSJSONSerialization.JSONObjectWithData(data!, options: .MutableContainers)
-            return res
+            let data = string.data(using: String.Encoding.utf8)
+            let res = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers)
+            return res as AnyObject
         } catch let error as NSError {
             print(error.localizedDescription)
         }
-        return false
+        return false as AnyObject
     }
     
-    class func trim(string: String) -> String {
-        let res = string.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+    class func trim(_ string: String) -> String {
+        let res = string.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
         return res
     }
     
-    class func getRGB (hex:String) -> UIColor {
-        var cString:String = hex.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet()).uppercaseString
+    class func getRGB (_ hex:String) -> UIColor {
+        var cString:String = hex.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).uppercased()
         
         if (cString.hasPrefix("#")) {
-            cString = (cString as NSString).substringFromIndex(1)
+            cString = (cString as NSString).substring(from: 1)
         }
         
-        let rString = (cString as NSString).substringToIndex(2)
-        let gString = ((cString as NSString).substringFromIndex(2) as NSString).substringToIndex(2)
-        let bString = ((cString as NSString).substringFromIndex(4) as NSString).substringToIndex(2)
+        let rString = (cString as NSString).substring(to: 2)
+        let gString = ((cString as NSString).substring(from: 2) as NSString).substring(to: 2)
+        let bString = ((cString as NSString).substring(from: 4) as NSString).substring(to: 2)
         
         var r:CUnsignedInt = 0, g:CUnsignedInt = 0, b:CUnsignedInt = 0;
-        NSScanner(string: rString).scanHexInt(&r)
-        NSScanner(string: gString).scanHexInt(&g)
-        NSScanner(string: bString).scanHexInt(&b)
+        Scanner(string: rString).scanHexInt32(&r)
+        Scanner(string: gString).scanHexInt32(&g)
+        Scanner(string: bString).scanHexInt32(&b)
         
         return UIColor(red: CGFloat(r) / 255.0, green: CGFloat(g) / 255.0, blue: CGFloat(b) / 255.0, alpha: CGFloat(1))
     }
     
-    class func getValueFromQueue(queryStrings: [String: String], key: String) -> String {
-        let data = String(queryStrings["data"]!)
-        let dataString = data.stringByRemovingPercentEncoding!
-        let _dataString = dataString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
-        let json = JSON(data: _dataString!)
-        let value = String(json[key])
-        return value
-    }
-    
-    class func getData(key: String) -> String {
-        let temp = NSUserDefaults.standardUserDefaults()
-        let value = temp.objectForKey(key)
+    class func getData(_ key: String) -> String {
+        let temp = UserDefaults.standard
+        let value = temp.object(forKey: key)
         
         if (value != nil) {
-            return String(value!)
+            return String(describing: value!)
         } else {
             return "nil"
         }
     }
     
-    class func hasData(key: String) -> Bool {
+    class func hasData(_ key: String) -> Bool {
         let temp = self.getData(key)
         return temp != "nil"
     }
     
-    class func setData(key: String, value: String) {
+    class func setData(_ key: String, value: String) {
         removeData(key)
-        let temp = NSUserDefaults.standardUserDefaults()
-        temp.setObject(value, forKey: key)
+        let temp = UserDefaults.standard
+        temp.set(value, forKey: key)
         temp.synchronize()
     }
     
-    class func removeData(key: String) {
-        let temp = NSUserDefaults.standardUserDefaults()
-        temp.removeObjectForKey(key)
+    class func removeData(_ key: String) {
+        let temp = UserDefaults.standard
+        temp.removeObject(forKey: key)
         temp.synchronize()
+    }
+    
+    class func getValueFromQuery(queryStrings: String, key: String) -> String {
+        let dataString = queryStrings.removingPercentEncoding
+        let _dataString = dataString?.data(using: String.Encoding.utf8, allowLossyConversion: false)
+        let json = try! JSONSerialization.jsonObject(with: _dataString!) as? NSDictionary
+        let res: String = json?.value(forKey: key) as! String
+        return res
+    }
+    
+    class func parseQuery(querystring: String) -> [String: String] {
+        var query = [String: String]()
+        for qs in querystring.components(separatedBy: "&") {
+            let key = qs.components(separatedBy: "=")[0]
+            let value = qs.components(separatedBy: "=")[1]
+            query[key] = value
+        }
+        return query
     }
     
     class Path {
         
-        static func basename(path: String) -> String {
-            return ((path as NSString).lastPathComponent as NSString).stringByDeletingPathExtension
+        static func basename(_ path: String) -> String {
+            return ((path as NSString).lastPathComponent as NSString).deletingPathExtension
         }
         
-        static func dirname(path: String) -> String {
-            return (path as NSString).stringByDeletingLastPathComponent
+        static func dirname(_ path: String) -> String {
+            return (path as NSString).deletingLastPathComponent
         }
         
-        static func extname(path: String) -> String {
+        static func extname(_ path: String) -> String {
             return (path as NSString).pathExtension
         }
         

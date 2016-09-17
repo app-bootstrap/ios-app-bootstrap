@@ -17,17 +17,17 @@ class LoginViewController: ViewController, UITextFieldDelegate {
         initView();
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
     func initView() {
         let titleLabel = UILabel()
-        titleLabel.textAlignment = .Center
+        titleLabel.textAlignment = .center
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.text = Const.TITLE
-        titleLabel.font = UIFont.systemFontOfSize(24)
+        titleLabel.font = UIFont.systemFont(ofSize: 24)
         view.addSubview(titleLabel)
         
         let userNameTextField = UITextField()
@@ -36,8 +36,8 @@ class LoginViewController: ViewController, UITextFieldDelegate {
         userNameTextField.layer.cornerRadius = 2
         userNameTextField.backgroundColor = Utils.getRGB("#eeffff")
         userNameTextField.layer.sublayerTransform = CATransform3DMakeTranslation(5, 0, 0)
-        userNameTextField.keyboardType = .NumbersAndPunctuation
-        userNameTextField.returnKeyType = UIReturnKeyType.Done
+        userNameTextField.keyboardType = .numbersAndPunctuation
+        userNameTextField.returnKeyType = UIReturnKeyType.done
         userNameTextField.enablesReturnKeyAutomatically = true
         userNameTextField.delegate = self
         
@@ -48,10 +48,10 @@ class LoginViewController: ViewController, UITextFieldDelegate {
         passwordTextField.translatesAutoresizingMaskIntoConstraints = false
         passwordTextField.layer.cornerRadius = 2
         passwordTextField.backgroundColor = Utils.getRGB("#eeffff")
-        passwordTextField.secureTextEntry = true
+        passwordTextField.isSecureTextEntry = true
         passwordTextField.layer.sublayerTransform = CATransform3DMakeTranslation(5, 0, 0)
-        passwordTextField.keyboardType = .NumbersAndPunctuation
-        passwordTextField.returnKeyType = UIReturnKeyType.Done
+        passwordTextField.keyboardType = .numbersAndPunctuation
+        passwordTextField.returnKeyType = UIReturnKeyType.done
         passwordTextField.enablesReturnKeyAutomatically = true
         passwordTextField.delegate = self
         
@@ -59,30 +59,30 @@ class LoginViewController: ViewController, UITextFieldDelegate {
         
         let loginButton = UIButton()
         loginButton.backgroundColor = Utils.getRGB(Const.COLOR_1)
-        loginButton.setTitle("Login", forState: UIControlState.Normal)
+        loginButton.setTitle("Login", for: UIControlState())
         loginButton.translatesAutoresizingMaskIntoConstraints = false
         loginButton.layer.cornerRadius = 2
         loginButton.titleLabel!.font = UIFont(name: "Helvetica",size: 20)
-        loginButton.addTarget(self, action: #selector(LoginViewController.login(_:)), forControlEvents: .TouchUpInside)
+        loginButton.addTarget(self, action: #selector(LoginViewController.login(_:)), for: .touchUpInside)
         view.addSubview(loginButton)
         
         let views:Dictionary<String, AnyObject>=["titleLabel": titleLabel, "userNameTextField": userNameTextField, "passwordTextField": passwordTextField, "loginButton": loginButton]
         
-        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-100-[titleLabel(<=20)]-30-[userNameTextField(<=50)]-10-[passwordTextField(<=50)]-50-[loginButton(<=40)]-100-|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
-        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|-[titleLabel]-|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
-        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|-[userNameTextField]-|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
-        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|-[passwordTextField]-|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
-        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|-[loginButton]-|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-100-[titleLabel(<=20)]-30-[userNameTextField(<=50)]-10-[passwordTextField(<=50)]-50-[loginButton(<=40)]-100-|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[titleLabel]-|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[userNameTextField]-|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[passwordTextField]-|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[loginButton]-|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
     }
     
-    func login(sender: UIButton) {
+    func login(_ sender: UIButton) {
         logger.info("login")
         Utils.setData("login", value: "login")
         let tabBar = TabBarController()
-        navigationController?.presentViewController(tabBar, animated: true, completion: nil)
+        navigationController?.present(tabBar, animated: true, completion: nil)
     }
     
-    func textFieldShouldReturn(textField:UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField:UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }

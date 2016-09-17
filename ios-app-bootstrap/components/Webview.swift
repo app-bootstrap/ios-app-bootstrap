@@ -10,16 +10,16 @@ import UIKit
 
 class Webview: UIWebView {
     
-    func loadURL(urlString: String) {
-        var url: NSURL
+    func loadURL(_ urlString: String) {
+        var url: URL
         
         if (urlString == Const.TEST) {
-            url = NSURL(fileURLWithPath:NSBundle.mainBundle().pathForResource("test", ofType:"html" , inDirectory:"static")!)
+            url = URL(fileURLWithPath:Bundle.main.path(forResource: "test", ofType:"html" , inDirectory:"static")!)
         } else {
-            url = NSURL(string: urlString)!
+            url = URL(string: urlString)!
         }
         
-        let request = NSURLRequest(URL: url)
+        let request = URLRequest(url: url)
         
         super.loadRequest(request)
     }

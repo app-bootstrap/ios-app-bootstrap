@@ -24,18 +24,18 @@ class WebviewController: UITabBarController, UIWebViewDelegate {
             startLoad()
         }
         
-        var userAgent = UIWebView().stringByEvaluatingJavaScriptFromString("navigator.userAgent")!;
+        var userAgent = UIWebView().stringByEvaluatingJavaScript(from: "navigator.userAgent")!;
         userAgent += " xdf"
-        let versionString = NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleShortVersionString")!
+        let versionString = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString")!
         userAgent += "/" + (versionString as! String)
-        NSUserDefaults.standardUserDefaults().registerDefaults(["UserAgent" : userAgent])
+        UserDefaults.standard.register(defaults: ["UserAgent" : userAgent])
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         startLoad()
     }
     
@@ -53,33 +53,33 @@ class WebviewController: UITabBarController, UIWebViewDelegate {
     }
     
     func initView() {
-        _webview.frame = CGRectMake(0, 65, view.bounds.width, view.bounds.height - 65 - 50)
+        _webview.frame = CGRect(x: 0, y: 65, width: view.bounds.width, height: view.bounds.height - 65 - 50)
         _webview.scalesPageToFit = true
         view.addSubview(_webview)
         _webview.delegate = self
         _webview.scrollView.bounces = false
     }
     
-    func _setTitle(title: String) {
+    func _setTitle(_ title: String) {
         navigationItem.title = title
     }
     
-    func webViewDidStartLoad(webView: UIWebView) {
+    func webViewDidStartLoad(_ webView: UIWebView) {
     }
     
-    func webViewDidFinishLoad(webView: UIWebView) {
-        let fileURL = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("JSBridge", ofType:"js", inDirectory:"static")!)
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+        let fileURL = URL(fileURLWithPath: Bundle.main.path(forResource: "JSBridge", ofType:"js", inDirectory:"static")!)
         do {
-            let javascript = try String(contentsOfURL: fileURL, encoding: NSUTF8StringEncoding)
-            _webview.stringByEvaluatingJavaScriptFromString(javascript)
+            let javascript = try String(contentsOf: fileURL, encoding: String.Encoding.utf8)
+            _webview.stringByEvaluatingJavaScript(from: javascript)
         } catch let error as NSError {
             print(error.localizedDescription)
         }
     }
     
-    func webView(webView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+    func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
         let url = request.mainDocumentURL
-        let scheme = request.URL?.scheme
+        let scheme = request.url?.scheme
         
         let host = url?.host
         let query = url?.query
@@ -87,24 +87,23 @@ class WebviewController: UITabBarController, UIWebViewDelegate {
         if (scheme == "jsbridge") {
             
             if (host == "call") {
-                
-                var queryStrings = Utils.parseQuery(query!)
-                
+                var queryStrings = Utils.parseQuery(querystring: query!)
+
                 let method = queryStrings["method"]
+                let data = queryStrings["data"]
                 
                 if (method == "setTitle") {
-                    
-                    let title = Utils.getValueFromQueue(queryStrings, key: "title")
+                    let title = Utils.getValueFromQuery(queryStrings: data!, key: "title")
                     _setTitle(title)
                 } else if (method == "pushView") {
-                    let url = Utils.getValueFromQueue(queryStrings, key: "url")
-                    let title = Utils.getValueFromQueue(queryStrings, key: "title")
+                    let url = Utils.getValueFromQuery(queryStrings: data!, key: "url")
+                    let title = Utils.getValueFromQuery(queryStrings: data!, key: "title")
                     
                     if (!url.isEmpty) {
                         navigationController?.pushViewController(WebviewController(urlString: url, title: title, autoLoad: true), animated: true)
                     }
                 } else if (method == "popView") {
-                    navigationController?.popViewControllerAnimated(true)
+                    navigationController?.popViewController(animated: true)
                 }
             } else if (host == "dispatch") {
                 

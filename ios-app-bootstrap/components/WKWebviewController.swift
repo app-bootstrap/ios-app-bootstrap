@@ -32,17 +32,17 @@ class WKWebviewController: UIViewController, WKNavigationDelegate {
         
         webview = WKWebView(frame: self.view.frame, configuration: config)
         webview.navigationDelegate = self
-        let url = NSURL(string: "https://github.com/xudafeng")
-        webview.loadRequest(NSURLRequest(URL: url!))
+        let url = URL(string: "https://github.com/xudafeng")
+        webview.load(URLRequest(url: url!))
         
-        webview.addObserver(self, forKeyPath: "loading", options: .New, context: nil)
-        webview.addObserver(self, forKeyPath: "title", options: .New, context: nil)
-        webview.addObserver(self, forKeyPath: "estimatedProgress", options: .New, context: nil)
+        webview.addObserver(self, forKeyPath: "loading", options: .new, context: nil)
+        webview.addObserver(self, forKeyPath: "title", options: .new, context: nil)
+        webview.addObserver(self, forKeyPath: "estimatedProgress", options: .new, context: nil)
         
         self.view.addSubview(webview)
     }
     
-    override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if keyPath == "loading" {
             logger.info("loading")
         } else if keyPath == "title" {
@@ -51,7 +51,7 @@ class WKWebviewController: UIViewController, WKNavigationDelegate {
             logger.info(webview.estimatedProgress)
         }
         
-        if !webview.loading {
+        if !webview.isLoading {
             let javascript = "document.getElementsByTagName('header')[0].style.display = 'none';";
             webview.evaluateJavaScript(javascript) { (_, _) -> Void in
                 self.logger.info("javascript loaded")

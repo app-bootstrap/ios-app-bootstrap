@@ -23,35 +23,35 @@ class OtherViewController: UITableViewController {
         
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return list.count
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         
         for i in 0 ..< list.count {
-            if (i == indexPath.section) {
-                cell.textLabel?.text = list[indexPath.section]
+            if (i == (indexPath as NSIndexPath).section) {
+                cell.textLabel?.text = list[(indexPath as NSIndexPath).section]
             }
         }
         
         return cell
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         for i in 0 ..< list.count {
-            if (i == indexPath.section) {
-                pushView(list[indexPath.section])
+            if (i == (indexPath as NSIndexPath).section) {
+                pushView(list[(indexPath as NSIndexPath).section])
             }
         }
     }
     
-    func pushView(view: String) {
+    func pushView(_ view: String) {
         logger.info("go view: \(view)")
         var controller: UIViewController
         switch view {

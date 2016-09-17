@@ -19,25 +19,25 @@ class ToastViewController: UIViewController {
     
     func initView() {
         navigationItem.title = Utils.Path.basename(#file)
-        view.backgroundColor = UIColor.whiteColor()
+        view.backgroundColor = UIColor.white
         
         let button = UIButton()
         button.backgroundColor = Utils.getRGB(Const.COLOR_1)
-        button.setTitle("show", forState: UIControlState.Normal)
+        button.setTitle("show", for: UIControlState())
         button.translatesAutoresizingMaskIntoConstraints = false
         button.layer.cornerRadius = 2
         button.titleLabel!.font = UIFont(name: "Helvetica",size: 12)
-        button.addTarget(self, action: #selector(ToastViewController.show), forControlEvents: .TouchUpInside)
+        //button.addTarget(self, action: #selector(ToastViewController.show), for: .touchUpInside)
         view.addSubview(button)
         
         let views:Dictionary<String, AnyObject>=["button": button]
         
-        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-100-[button(<=20)]-|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-100-[button(<=20)]-|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
         
-        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|-120-[button]-120-|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-120-[button]-120-|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
     }
     
     func show() {
-        view.makeToast(message: "this is toast", duration: 3, position: HRToastPositionCenter)
+        view.makeToast(message: "this is toast", duration: 3, position: HRToastPositionCenter as AnyObject)
     }
 }

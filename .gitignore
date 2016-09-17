@@ -20,11 +20,9 @@ DerivedData
 .project
 .settings
 node_modules/
-*.swp
-*.swo
-*.swn
-.sw*
 logs/
 Carthage/
 Cartfile.resolved
 UserInterfaceState.xcuserstate
+*.sw*
+*.un~

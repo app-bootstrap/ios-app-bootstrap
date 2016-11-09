@@ -106,7 +106,7 @@ class Utils: NSObject {
         temp.synchronize()
     }
     
-    class func getValueFromQuery(queryStrings: String, key: String) -> String {
+    class func getValueFromQuery(_ queryStrings: String, key: String) -> String {
         let dataString = queryStrings.removingPercentEncoding
         let _dataString = dataString?.data(using: String.Encoding.utf8, allowLossyConversion: false)
         let json = try! JSONSerialization.jsonObject(with: _dataString!) as? NSDictionary
@@ -114,7 +114,7 @@ class Utils: NSObject {
         return res
     }
     
-    class func parseQuery(querystring: String) -> [String: String] {
+    class func parseQuery(_ querystring: String) -> [String: String] {
         var query = [String: String]()
         for qs in querystring.components(separatedBy: "&") {
             let key = qs.components(separatedBy: "=")[0]

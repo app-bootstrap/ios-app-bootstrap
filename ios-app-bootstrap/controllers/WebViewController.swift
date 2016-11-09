@@ -87,17 +87,17 @@ class WebviewController: UITabBarController, UIWebViewDelegate {
         if (scheme == "jsbridge") {
             
             if (host == "call") {
-                var queryStrings = Utils.parseQuery(querystring: query!)
+                var queryStrings = Utils.parseQuery(query!)
 
                 let method = queryStrings["method"]
                 let data = queryStrings["data"]
                 
                 if (method == "setTitle") {
-                    let title = Utils.getValueFromQuery(queryStrings: data!, key: "title")
+                    let title = Utils.getValueFromQuery(data!, key: "title")
                     _setTitle(title)
                 } else if (method == "pushView") {
-                    let url = Utils.getValueFromQuery(queryStrings: data!, key: "url")
-                    let title = Utils.getValueFromQuery(queryStrings: data!, key: "title")
+                    let url = Utils.getValueFromQuery(data!, key: "url")
+                    let title = Utils.getValueFromQuery(data!, key: "title")
                     
                     if (!url.isEmpty) {
                         navigationController?.pushViewController(WebviewController(urlString: url, title: title, autoLoad: true), animated: true)

@@ -14,6 +14,7 @@ xcuserdata
 profile
 *.moved-aside
 DerivedData
+*.xcodeproj
 .idea/
 # Normal
 .project
@@ -24,6 +25,7 @@ Carthage/
 Cartfile.resolved
 UserInterfaceState.xcuserstate
 ios-app-bootstrap/
+ios-app-bootstrapTests/
 Cartfile
 *.sw*
 *.un~

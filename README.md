@@ -14,7 +14,7 @@ $ make install
 
 ## Output
 
-npmcdn.com: [ios-app-bootstrap.zip](//npmcdn.com/ios-app-bootstrap@1.0.0/build/ios-app-bootstrap.zip)
+npmcdn.com: [ios-app-bootstrap.zip](//npmcdn.com/ios-app-bootstrap@latest/build/ios-app-bootstrap.zip)
 
 ## License
 

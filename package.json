@@ -1,0 +1,13 @@
+{
+  "name": "ios-app-bootstrap",
+  "version": "1.0.0",
+  "description": "A starting tutorial for iOS application.",
+  "keywords": [
+    "iOS"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/xudafeng/ios-app-bootstrap.git"
+  },
+  "license": "MIT"
+}

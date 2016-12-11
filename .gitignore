@@ -24,5 +24,6 @@ logs/
 Carthage/
 Cartfile.resolved
 UserInterfaceState.xcuserstate
-*.sw*
+.*.sw[a-z]
+.sw?
 *.un~

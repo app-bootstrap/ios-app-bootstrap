@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63176F251DFD1C2F001F4106 /* UIGestureRecognizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63176F241DFD1C2F001F4106 /* UIGestureRecognizerViewController.swift */; };
 		63445F4E1CA295E5004D153F /* OtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63445F4D1CA295E5004D153F /* OtherViewController.swift */; };
 		63445F501CA29969004D153F /* WKWebviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63445F4F1CA29969004D153F /* WKWebviewController.swift */; };
 		6366BB5D1CA3A07B009311BD /* AnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6366BB5C1CA3A07B009311BD /* AnimationController.swift */; };
@@ -54,6 +55,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		63176F241DFD1C2F001F4106 /* UIGestureRecognizerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIGestureRecognizerViewController.swift; sourceTree = "<group>"; };
 		63445F4D1CA295E5004D153F /* OtherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherViewController.swift; sourceTree = "<group>"; };
 		63445F4F1CA29969004D153F /* WKWebviewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKWebviewController.swift; sourceTree = "<group>"; };
 		6366BB5C1CA3A07B009311BD /* AnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationController.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				6366BB5E1CA3A213009311BD /* ProgressBarView.swift */,
 				636A3AEE1CA4DC1A00D78C84 /* Toast.swift */,
 				636A3AF01CA4E13900D78C84 /* ToastViewController.swift */,
+				63176F241DFD1C2F001F4106 /* UIGestureRecognizerViewController.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				TargetAttributes = {
 					63DA6D071B9941F600AFC15F = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = D8A9Y93768;
 						LastSwiftMigration = 0810;
 					};
 					63DA6D1C1B9941F600AFC15F = {
@@ -392,6 +396,7 @@
 				63894CBE1B99768300464AB0 /* PersonalViewController.swift in Sources */,
 				638317DA1CB35D5F00EF3EF5 /* mvp.swift in Sources */,
 				63894CBC1B99758F00464AB0 /* HomeViewController.swift in Sources */,
+				63176F251DFD1C2F001F4106 /* UIGestureRecognizerViewController.swift in Sources */,
 				63F96D7A1C841F7200C95604 /* Const.swift in Sources */,
 				63445F501CA29969004D153F /* WKWebviewController.swift in Sources */,
 				6366BB5D1CA3A07B009311BD /* AnimationController.swift in Sources */,
@@ -530,6 +535,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = D8A9Y93768;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -548,6 +554,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = D8A9Y93768;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",

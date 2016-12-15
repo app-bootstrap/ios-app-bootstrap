@@ -11,7 +11,7 @@ import Logger
 
 class OtherViewController: UITableViewController {
     let logger = Logger()
-    let list = ["UIGestureRecognizer", "WKWebview", "Toast", "Animation", "MVC", "MVP", "MVVM","Macaca Test Swipe API","Macaca Test Swipe API","Macaca Test Swipe API","Macaca Test Swipe API","Macaca Test Swipe API","Macaca Test Swipe API","Macaca Test Swipe API","Macaca Test Swipe API","Macaca Test Swipe API","Macaca Test Swipe API","Macaca Test Swipe API","Macaca Test Swipe API","Macaca Test Swipe API","Macaca Test Swipe API","Macaca Test Swipe API","Macaca Test Swipe API","Macaca Test Swipe API"]
+    let list = ["Gesture", "WKWebview", "Toast", "Animation", "MVC", "MVP", "MVVM","Macaca Test Swipe API","Macaca Test Swipe API","Macaca Test Swipe API","Macaca Test Swipe API","Macaca Test Swipe API","Macaca Test Swipe API","Macaca Test Swipe API","Macaca Test Swipe API","Macaca Test Swipe API","Macaca Test Swipe API","Macaca Test Swipe API","Macaca Test Swipe API","Macaca Test Swipe API","Macaca Test Swipe API","Macaca Test Swipe API","Macaca Test Swipe API","Macaca Test Swipe API"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,7 +55,7 @@ class OtherViewController: UITableViewController {
         logger.info("go view: \(view)")
         var controller: UIViewController
         switch view {
-        case "UIGestureRecognizer":
+        case "Gesture":
             controller = UIGestureRecognizerViewController()
         case "WKWebview":
             controller = WKWebviewController()

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		63176F251DFD1C2F001F4106 /* UIGestureRecognizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63176F241DFD1C2F001F4106 /* UIGestureRecognizerViewController.swift */; };
+		633E16AB1E039000000110F3 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633E16AA1E039000000110F3 /* AlertViewController.swift */; };
 		63445F4E1CA295E5004D153F /* OtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63445F4D1CA295E5004D153F /* OtherViewController.swift */; };
 		63445F501CA29969004D153F /* WKWebviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63445F4F1CA29969004D153F /* WKWebviewController.swift */; };
 		6366BB5D1CA3A07B009311BD /* AnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6366BB5C1CA3A07B009311BD /* AnimationController.swift */; };
@@ -56,6 +57,7 @@
 
 /* Begin PBXFileReference section */
 		63176F241DFD1C2F001F4106 /* UIGestureRecognizerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIGestureRecognizerViewController.swift; sourceTree = "<group>"; };
+		633E16AA1E039000000110F3 /* AlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		63445F4D1CA295E5004D153F /* OtherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherViewController.swift; sourceTree = "<group>"; };
 		63445F4F1CA29969004D153F /* WKWebviewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKWebviewController.swift; sourceTree = "<group>"; };
 		6366BB5C1CA3A07B009311BD /* AnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationController.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				636A3AEE1CA4DC1A00D78C84 /* Toast.swift */,
 				636A3AF01CA4E13900D78C84 /* ToastViewController.swift */,
 				63176F241DFD1C2F001F4106 /* UIGestureRecognizerViewController.swift */,
+				633E16AA1E039000000110F3 /* AlertViewController.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -383,6 +386,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				638317DB1CB35D5F00EF3EF5 /* mvvm.swift in Sources */,
+				633E16AB1E039000000110F3 /* AlertViewController.swift in Sources */,
 				63894CC01B99782700464AB0 /* Utils.swift in Sources */,
 				63445F4E1CA295E5004D153F /* OtherViewController.swift in Sources */,
 				638317D91CB35D5F00EF3EF5 /* mvc.swift in Sources */,

@@ -92,12 +92,12 @@ class UIGestureRecognizerViewController: UIViewController {
     
     func tapSingleDid(_ recognizer:UISwipeGestureRecognizer) {
         let point = recognizer.location(in: view)
-        printInfo(name: "tapSingle", other: "x:\(point.x) y:\(point.y)")
+        printInfo(name: "singleTap", other: "x:\(point.x) y:\(point.y)")
     }
     
     func tapDoubleDid(_ recognizer:UISwipeGestureRecognizer) {
         let point = recognizer.location(in: view)
-        printInfo(name: "tapDouble", other: "x:\(point.x) y:\(point.y)")
+        printInfo(name: "doubleTap", other: "x:\(point.x) y:\(point.y)")
     }
     
     func rotationDid(_ recognizer:UIRotationGestureRecognizer) {

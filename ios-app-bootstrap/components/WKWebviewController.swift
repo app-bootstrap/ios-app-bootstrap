@@ -58,4 +58,10 @@ class WKWebviewController: UIViewController, WKNavigationDelegate {
             }
         }
     }
+    
+    deinit {
+        webview.removeObserver(self, forKeyPath: "loading");
+        webview.removeObserver(self, forKeyPath: "title");
+        webview.removeObserver(self, forKeyPath: "estimatedProgress");
+    }
 }

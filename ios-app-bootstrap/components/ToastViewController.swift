@@ -1,5 +1,5 @@
 //
-//  ToastViewController.swift
+//  CoreMotionViewController.swift
 //  ios-app-bootstrap
 //
 //  Created by xdf on 3/25/16.

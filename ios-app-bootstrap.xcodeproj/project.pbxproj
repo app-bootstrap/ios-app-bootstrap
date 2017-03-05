@@ -23,6 +23,7 @@
 		63894CBE1B99768300464AB0 /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63894CBD1B99768300464AB0 /* PersonalViewController.swift */; };
 		63894CC01B99782700464AB0 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63894CBF1B99782700464AB0 /* Utils.swift */; };
 		63894CD31B997D5400464AB0 /* Webview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63894CD21B997D5400464AB0 /* Webview.swift */; };
+		638BE8671E6C1B6A009EC0F3 /* AccelerometerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638BE8661E6C1B6A009EC0F3 /* AccelerometerViewController.swift */; };
 		63B458F61C9F06300074F4CE /* Logger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63B458F51C9F06300074F4CE /* Logger.framework */; };
 		63D5C3F31C9980B1008DE710 /* avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 63D5C3F21C9980B1008DE710 /* avatar.png */; };
 		63D638D91C900F55005B1E61 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D638D71C900F55005B1E61 /* CryptoSwift.framework */; };
@@ -72,6 +73,7 @@
 		63894CBD1B99768300464AB0 /* PersonalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = "<group>"; };
 		63894CBF1B99782700464AB0 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		63894CD21B997D5400464AB0 /* Webview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Webview.swift; sourceTree = "<group>"; };
+		638BE8661E6C1B6A009EC0F3 /* AccelerometerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccelerometerViewController.swift; sourceTree = "<group>"; };
 		63B458F51C9F06300074F4CE /* Logger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Logger.framework; path = Carthage/Build/iOS/Logger.framework; sourceTree = "<group>"; };
 		63D5C3F21C9980B1008DE710 /* avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = avatar.png; path = res/avatar.png; sourceTree = "<group>"; };
 		63D638D71C900F55005B1E61 /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = Carthage/Build/iOS/CryptoSwift.framework; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 		63894CB71B99734100464AB0 /* components */ = {
 			isa = PBXGroup;
 			children = (
+				638BE8661E6C1B6A009EC0F3 /* AccelerometerViewController.swift */,
 				63D638E81C90233F005B1E61 /* ViewController.swift */,
 				63894CB81B99736400464AB0 /* TabBarController.swift */,
 				63D638EA1C90394C005B1E61 /* WebViewController.swift */,
@@ -403,6 +406,7 @@
 				63176F251DFD1C2F001F4106 /* UIGestureRecognizerViewController.swift in Sources */,
 				63F96D7A1C841F7200C95604 /* Const.swift in Sources */,
 				63445F501CA29969004D153F /* WKWebviewController.swift in Sources */,
+				638BE8671E6C1B6A009EC0F3 /* AccelerometerViewController.swift in Sources */,
 				6366BB5D1CA3A07B009311BD /* AnimationController.swift in Sources */,
 				636A3AF11CA4E13900D78C84 /* ToastViewController.swift in Sources */,
 				6366BB5F1CA3A213009311BD /* ProgressBarView.swift in Sources */,

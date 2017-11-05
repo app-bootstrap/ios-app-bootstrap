@@ -11,7 +11,7 @@ import Logger
 
 class OtherViewController: UITableViewController {
     let logger = Logger()
-    let list = ["Gesture", "WKWebview", "Toast", "Animation", "Alert", "MVC", "MVP", "MVVM","CoreMotion","Macaca Test Swipe API","Macaca Test Swipe API","Macaca Test Swipe API","Macaca Test Swipe API","Macaca Test Swipe API","Macaca Test Swipe API","Macaca Test Swipe API","Macaca Test Swipe API","Macaca Test Swipe API","Macaca Test Swipe API","Macaca Test Swipe API","Macaca Test Swipe API","Macaca Test Swipe API"]
+    let list = ["Gesture", "WKWebview", "Toast", "Animation", "Alert", "MVC", "MVP", "MVVM","CoreMotion","ARKit","Macaca Test Swipe API","Macaca Test Swipe API","Macaca Test Swipe API","Macaca Test Swipe API","Macaca Test Swipe API","Macaca Test Swipe API","Macaca Test Swipe API","Macaca Test Swipe API","Macaca Test Swipe API","Macaca Test Swipe API","Macaca Test Swipe API","Macaca Test Swipe API"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,6 +84,8 @@ class OtherViewController: UITableViewController {
             controller = view
         case "CoreMotion":
             controller = CoreMotionViewController()
+        case "ARKit":
+          controller = ARKitViewController()
         default:
             controller = WKWebviewController()
         }

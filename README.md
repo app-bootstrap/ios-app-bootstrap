@@ -8,7 +8,7 @@ A starting tutorial for iOS application with Swift.
 
 ## Build
 
-``` bash
+```bash
 $ make install
 ```
 

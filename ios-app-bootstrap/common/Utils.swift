@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Logger
 
 class Utils: NSObject {
 
@@ -123,6 +124,11 @@ class Utils: NSObject {
         }
         return query
     }
+  
+    class func dataHubAdapter(_ APIName: String) -> String {
+      let url = "\(Const.DATAHUB_HOST)/data/\(Const.DATAHUB_HUBNAME_1)/\(APIName)"
+      return url
+    }
     
     class Path {
         
@@ -137,6 +143,5 @@ class Utils: NSObject {
         static func extname(_ path: String) -> String {
             return (path as NSString).pathExtension
         }
-        
     }
 }

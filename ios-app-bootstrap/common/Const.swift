@@ -19,4 +19,6 @@ struct Const {
     static let PASSWORD_TIPS = "please input password"
     static let COLOR_1 = "#00bcd4"
     static let COLOR_2 = "#ff4081"
+    static let DATAHUB_HOST = "http://localhost:7001"
+    static let DATAHUB_HUBNAME_1 = "bootstrap"
 }

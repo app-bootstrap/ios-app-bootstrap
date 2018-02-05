@@ -9,7 +9,15 @@ A starting tutorial for iOS application with Swift.
 ## Build
 
 ```bash
-$ make install
+$ carthage update --platform iOS --verbose
+$ xcodebuild -project ios-app-bootstrap.xcodeproj -sdk iphonesimulator
+```
+
+## Datahub
+
+```bash
+$ npm i macaca-datahub -g
+$ datahub server -c ./macaca-datahub.config.js --verbose
 ```
 
 ## Output
@@ -19,5 +27,3 @@ npmcdn.com: [ios-app-bootstrap.zip](//npmcdn.com/ios-app-bootstrap@latest/build/
 ## License
 
 The MIT License (MIT)
-
-Copyright (c) 2015 xdf

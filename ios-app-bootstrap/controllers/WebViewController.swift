@@ -24,11 +24,9 @@ class WebviewController: UITabBarController, UIWebViewDelegate {
             startLoad()
         }
         
-        var userAgent = UIWebView().stringByEvaluatingJavaScript(from: "navigator.userAgent")!;
-        userAgent += " xdf"
+      let userAgent = UIWebView().stringByEvaluatingJavaScript(from: "navigator.userAgent")!;
         let versionString = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString")!
-        userAgent += "/" + (versionString as! String)
-        UserDefaults.standard.register(defaults: ["UserAgent" : userAgent])
+        UserDefaults.standard.register(defaults: ["UserAgent" : "\(userAgent) custom /\(versionString as! String)"])
     }
     
     required init?(coder aDecoder: NSCoder) {

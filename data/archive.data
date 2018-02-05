@@ -1,0 +1,13 @@
+[
+  {
+    "identifer": "bootstrap",
+    "pathname": "testApi",
+    "description": "test api",
+    "method": "ALL",
+    "currentScene": "failed",
+    "proxyContent": "{}",
+    "params": "{}",
+    "scenes": "[{\"name\":\"default\",\"data\":{\"success\":true,\"data\":{\"message\":\"come from datahub\"}}},{\"name\":\"failed\",\"data\":{\"success\":false,\"errorMessage\":\"come from datahub\"}}]",
+    "delay": "0"
+  }
+]

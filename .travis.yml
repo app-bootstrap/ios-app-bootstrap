@@ -5,4 +5,4 @@ osx_image:
 before_install:
   - brew update
 script:
-  - make build
+  - echo hi

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		63176F251DFD1C2F001F4106 /* UIGestureRecognizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63176F241DFD1C2F001F4106 /* UIGestureRecognizerViewController.swift */; };
+		63272ACC2027FF95006315CD /* DataHubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63272ACB2027FF95006315CD /* DataHubViewController.swift */; };
 		633E16AB1E039000000110F3 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633E16AA1E039000000110F3 /* AlertViewController.swift */; };
 		63445F4E1CA295E5004D153F /* OtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63445F4D1CA295E5004D153F /* OtherViewController.swift */; };
 		63445F501CA29969004D153F /* WKWebviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63445F4F1CA29969004D153F /* WKWebviewController.swift */; };
@@ -69,6 +70,7 @@
 
 /* Begin PBXFileReference section */
 		63176F241DFD1C2F001F4106 /* UIGestureRecognizerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIGestureRecognizerViewController.swift; sourceTree = "<group>"; };
+		63272ACB2027FF95006315CD /* DataHubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHubViewController.swift; sourceTree = "<group>"; };
 		633E16AA1E039000000110F3 /* AlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		63445F4D1CA295E5004D153F /* OtherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherViewController.swift; sourceTree = "<group>"; };
 		63445F4F1CA29969004D153F /* WKWebviewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKWebviewController.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 				63176F241DFD1C2F001F4106 /* UIGestureRecognizerViewController.swift */,
 				633E16AA1E039000000110F3 /* AlertViewController.swift */,
 				635BAC871FAF3F5200487870 /* ARKitViewController.swift */,
+				63272ACB2027FF95006315CD /* DataHubViewController.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -469,6 +472,7 @@
 				63894CB91B99736400464AB0 /* TabBarController.swift in Sources */,
 				63DA6D0E1B9941F600AFC15F /* AppDelegate.swift in Sources */,
 				63D638E91C90233F005B1E61 /* ViewController.swift in Sources */,
+				63272ACC2027FF95006315CD /* DataHubViewController.swift in Sources */,
 				63894CD31B997D5400464AB0 /* Webview.swift in Sources */,
 				636A3AEF1CA4DC1A00D78C84 /* Toast.swift in Sources */,
 				63D638E71C90224F005B1E61 /* LoginViewController.swift in Sources */,

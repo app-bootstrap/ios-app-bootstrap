@@ -3,6 +3,8 @@ install:
 	carthage update --platform iOS --verbose
 build: install
 	xcodebuild -project ios-app-bootstrap.xcodeproj -sdk iphonesimulator
+test:
+	echo TODO
 coverage:
-	slather coverage -s --scheme ios-app-bootstrap ./ios-app-bootstrap.xcodeproj
+	slather coverage
 .PHONY: test

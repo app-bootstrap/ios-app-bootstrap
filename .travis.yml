@@ -7,7 +7,4 @@ before_install:
 install:
   - bundle install --without=documentation --path ../travis_bundle_dir
 script:
-  - make build
-after_success:
-  - slather
-  - bash <(curl -s https://codecov.io/bash) -f path/to/xml_report/cobertura.xml -X coveragepy -X gcov -X xcode
+  - echo hi

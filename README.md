@@ -20,6 +20,18 @@ $ npm i macaca-datahub -g
 $ datahub server -c ./macaca-datahub.config.js --verbose
 ```
 
+## Testing
+
+```bash
+$ make test
+```
+
+### Coverage
+
+```bash
+$ make coverage
+```
+
 ## Output
 
 npmcdn.com: [ios-app-bootstrap.zip](//npmcdn.com/ios-app-bootstrap@latest/build/ios-app-bootstrap.zip)

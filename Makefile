@@ -1,4 +1,3 @@
-all: install
 install:
 	carthage update --platform iOS --verbose
 build: install
@@ -7,4 +6,4 @@ test:
 	echo TODO
 coverage:
 	slather coverage
-.PHONY: test
+.PHONY: coverage

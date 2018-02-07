@@ -28,9 +28,9 @@ class ios_app_bootstrapUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testFuncList() {
+        let app = XCUIApplication()
+        app.buttons["Login"].tap()
+        app.buttons["list"].tap()
     }
-    
 }

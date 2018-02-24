@@ -1,9 +1,6 @@
-#coverage_service: cobertura_xml
-coverage_service: html
-xcodeproj: ios-app-bootstrap.xcodeproj
-scheme: ios-app-bootstrap
-output_directory: ./coverage
 ignore:
   - Carthage/*
   - build/*
   - data/*
+  - coverage/*
+  - reporter/*

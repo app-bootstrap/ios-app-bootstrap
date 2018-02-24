@@ -5,5 +5,5 @@ build: install
 test:
 	echo TODO
 coverage:
-	slather coverage
+	macaca coverage -r ios -n ios-app-bootstrap -p ./ios-app-bootstrap.xcodeproj --html ./reporter
 .PHONY: coverage

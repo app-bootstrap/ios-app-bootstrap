@@ -27,6 +27,7 @@ UserInterfaceState.xcuserstate
 coverage/
 screenshots/
 reports/
+reporter/
 .*.sw[a-z]
 .sw?
 *.un~

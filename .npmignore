@@ -27,5 +27,6 @@ UserInterfaceState.xcuserstate
 ios-app-bootstrap/
 ios-app-bootstrapTests/
 Cartfile
+reporter/
 *.sw*
 *.un~

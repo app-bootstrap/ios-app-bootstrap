@@ -29,6 +29,7 @@ $ make test
 ### Coverage
 
 ```bash
+$ npm i macaca-cli -g
 $ make coverage
 ```
 

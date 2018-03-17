@@ -79,7 +79,7 @@ class LoginViewController: ViewController, UITextFieldDelegate {
         logger.info("login")
         Utils.setData("login", value: "login")
         let tabBar = TabBarController()
-        navigationController?.present(tabBar, animated: true, completion: nil)
+        self.present(tabBar, animated: true, completion: nil)
     }
     
     func textFieldShouldReturn(_ textField:UITextField) -> Bool {

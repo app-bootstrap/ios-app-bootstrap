@@ -1,9 +1,12 @@
 {
   "name": "ios-app-bootstrap",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "A starting tutorial for iOS application.",
   "keywords": [
     "iOS"
+  ],
+  "files": [
+    "build/ios-app-bootstrap.zip"
   ],
   "repository": {
     "type": "git",

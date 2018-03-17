@@ -28,6 +28,8 @@ coverage/
 screenshots/
 reports/
 reporter/
+package/
 .*.sw[a-z]
 .sw?
 *.un~
+*.tgz

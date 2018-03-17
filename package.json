@@ -6,7 +6,8 @@
     "iOS"
   ],
   "files": [
-    "build/ios-app-bootstrap.zip"
+    "build/ios-app-bootstrap.zip",
+    "index.js"
   ],
   "main": "./index.js",
   "repository": {

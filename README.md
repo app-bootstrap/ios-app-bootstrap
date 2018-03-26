@@ -4,7 +4,7 @@
 
 A starting tutorial for iOS application with Swift.
 
-[native-in-practice](//app-bootstrap.github.io/slide/archives/native-in-practice)
+[native-in-practice](//xudafeng.github.io/slide/archives/native-in-practice)
 
 ## Build
 

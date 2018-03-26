@@ -1,10 +1,10 @@
 # ios-app-bootstrap
 
-[![Build Status](https://img.shields.io/travis/xudafeng/ios-app-bootstrap.svg?style=flat-square)](https://travis-ci.org/xudafeng/ios-app-bootstrap)
+[![Build Status](https://img.shields.io/travis/app-bootstrap/ios-app-bootstrap.svg?style=flat-square)](https://travis-ci.org/app-bootstrap/ios-app-bootstrap)
 
 A starting tutorial for iOS application with Swift.
 
-[native-in-practice](//xudafeng.github.io/slide/archives/native-in-practice)
+[native-in-practice](//app-bootstrap.github.io/slide/archives/native-in-practice)
 
 ## Build
 

@@ -12,7 +12,7 @@
   "main": "./index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/xudafeng/ios-app-bootstrap.git"
+    "url": "git://github.com/app-bootstrap/ios-app-bootstrap.git"
   },
   "license": "MIT"
 }

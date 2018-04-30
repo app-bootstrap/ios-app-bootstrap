@@ -69,9 +69,9 @@ class WebviewController: UITabBarController, UIWebViewDelegate, UIViewController
     _webview.addSubview(lottieAnimation!)
     
     // The center of the screen, where the boat will start
-    let screenCenter = CGPoint(x:view.bounds.midX, y:view.bounds.midY / 2)
+    let screenCenter = CGPoint(x:view.bounds.midX, y:view.bounds.midY)
     // The center one screen height above the screen. Where the boat will end up when the download completes
-    let offscreenCenter = CGPoint(x:view.bounds.midX, y:-view.bounds.midY / 2)
+    let offscreenCenter = CGPoint(x:view.bounds.midX, y:-view.bounds.midY)
     
     // Convert points into animation view coordinate space.
     let boatStartPoint = lottieAnimation!.convert(screenCenter, toKeypathLayer: LOTKeypath(string: "Boat"))
@@ -96,7 +96,7 @@ class WebviewController: UITabBarController, UIWebViewDelegate, UIViewController
   func webViewDidStartLoad(_ webView: UIWebView) {
     lottieAnimation!.pause()
     lottieAnimation!.loopAnimation = true
-    lottieAnimation!.sizeToFit()
+    lottieAnimation!.frame = CGRect(x: (self.view.frame.width - 180) / 2, y: (self.view.frame.height - 180) / 2, width: 180, height: 180)
     // Speed up animation to finish out the current loop.
     lottieAnimation!.animationSpeed = 2
     lottieAnimation!.play(toProgress: 1)

@@ -32,7 +32,7 @@ class WKWebviewController: UIViewController, WKNavigationDelegate {
         
         webview = WKWebView(frame: self.view.frame, configuration: config)
         webview.navigationDelegate = self
-        let url = URL(string: "https://github.com/xudafeng")
+        let url = URL(string: "https://github.com/app-bootstrap")
         webview.load(URLRequest(url: url!))
         
         webview.addObserver(self, forKeyPath: "loading", options: .new, context: nil)

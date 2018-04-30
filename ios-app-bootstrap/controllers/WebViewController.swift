@@ -15,8 +15,8 @@ class WebviewController: UITabBarController, UIWebViewDelegate, UIViewController
   private var _title: String
   private var _webview = Webview()
   private var _loaded = false
+  private var maskView: UIView?
   private var lottieAnimation: LOTAnimationView?
-  var positionInterpolator: LOTPointInterpolatorCallback?
   
   init(urlString: String, title: String, autoLoad: Bool) {
     _urlString = urlString
@@ -60,33 +60,20 @@ class WebviewController: UITabBarController, UIWebViewDelegate, UIViewController
     _webview.delegate = self
     _webview.scrollView.bounces = false
     
+    maskView = UIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height))
+    maskView?.backgroundColor = Utils.getRGB("#ffffff")
     lottieAnimation = LOTAnimationView(name: "static/loading")
     // Set view to full screen, aspectFill
     lottieAnimation!.autoresizingMask = [.flexibleHeight, .flexibleWidth]
     lottieAnimation!.contentMode = .scaleAspectFill
     lottieAnimation!.frame = view.bounds
     // Add the Animation
-    _webview.addSubview(lottieAnimation!)
-    
-    // The center of the screen, where the boat will start
-    let screenCenter = CGPoint(x:view.bounds.midX, y:view.bounds.midY)
-    // The center one screen height above the screen. Where the boat will end up when the download completes
-    let offscreenCenter = CGPoint(x:view.bounds.midX, y:-view.bounds.midY)
-    
-    // Convert points into animation view coordinate space.
-    let boatStartPoint = lottieAnimation!.convert(screenCenter, toKeypathLayer: LOTKeypath(string: "Boat"))
-    let boatEndPoint = lottieAnimation!.convert(offscreenCenter, toKeypathLayer: LOTKeypath(string: "Boat"))
-    
-    // Set up out interpolator, to be driven by the download callback
-    positionInterpolator = LOTPointInterpolatorCallback(from: boatStartPoint, to: boatEndPoint)
-    // Set the interpolator on the animation view for the Boat.Transform.Position keypath.
-    lottieAnimation!.setValueDelegate(positionInterpolator!, for:LOTKeypath(string: "Boat.Transform.Position"))
-    
+    maskView?.addSubview(lottieAnimation!)
+    _webview.addSubview(maskView!)
+  
     //Play the first portion of the animation on loop until the download finishes.
     lottieAnimation!.loopAnimation = true
-    lottieAnimation!.play(fromProgress: 0,
-                        toProgress: 0.5,
-                        withCompletion: nil)
+    lottieAnimation!.play(fromProgress: 0, toProgress: 0.5, withCompletion: nil)
   }
   
   func _setTitle(_ title: String) {
@@ -96,7 +83,7 @@ class WebviewController: UITabBarController, UIWebViewDelegate, UIViewController
   func webViewDidStartLoad(_ webView: UIWebView) {
     lottieAnimation!.pause()
     lottieAnimation!.loopAnimation = true
-    lottieAnimation!.frame = CGRect(x: (self.view.frame.width - 180) / 2, y: (self.view.frame.height - 180) / 2, width: 180, height: 180)
+    lottieAnimation!.frame = CGRect(x: (self.view.frame.width - 100) / 2, y: (self.view.frame.height - 200) / 2, width: 100, height: 100)
     // Speed up animation to finish out the current loop.
     lottieAnimation!.animationSpeed = 2
     lottieAnimation!.play(toProgress: 1)
@@ -107,7 +94,7 @@ class WebviewController: UITabBarController, UIWebViewDelegate, UIViewController
     lottieAnimation!.loopAnimation = false
     
     lottieAnimation!.play(toProgress: 1) {[weak self] (_) in
-      self!.lottieAnimation!.removeFromSuperview()
+      self!.maskView!.removeFromSuperview()
     }
     
     let fileURL = URL(fileURLWithPath: Bundle.main.path(forResource: "JSBridge", ofType:"js", inDirectory:"static")!)

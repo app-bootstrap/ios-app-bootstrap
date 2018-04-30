@@ -1,3 +1,4 @@
 github "Alamofire/Alamofire"
 github "krzyzanowskim/CryptoSwift"
 github "xudafeng/Logger.swift"
+github "airbnb/lottie-ios"

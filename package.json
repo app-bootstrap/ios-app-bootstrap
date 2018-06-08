@@ -14,5 +14,11 @@
     "type": "git",
     "url": "git://github.com/app-bootstrap/ios-app-bootstrap.git"
   },
+  "devDependencies": {
+    "marmot-cli": "^1.0.0"
+  },
+  "scripts": {
+    "marmot": "marmot report -c ./marmot.config.js"
+  },
   "license": "MIT"
 }

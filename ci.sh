@@ -6,4 +6,4 @@ make build
 
 npm i
 
-npm run marmot
+MARMOT_IOS=true npm run marmot

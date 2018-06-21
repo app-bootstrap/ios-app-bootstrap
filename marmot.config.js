@@ -2,6 +2,11 @@
 
 const helper = require('marmot-cli/lib/helper');
 
+const {
+  iosUtils,
+  getDepsPkgVersion,
+} = require('marmot-cli/lib/helper');
+
 const pkg = require('./package');
 
 module.exports = {
@@ -10,8 +15,7 @@ module.exports = {
   ],
   packages: [
     {
-      version: helper
-        .iosUtils
+      version: iosUtils
         .getFieldFromPlist(`${pkg.name}/Info.plist`, 'CFBundleVersion'),
       path: `build/Release-iphonesimulator/${pkg.name}.app/`,
       type: 'Release'
@@ -20,5 +24,6 @@ module.exports = {
   testInfo: {
   },
   extraInfo: {
+    'marmot-cli': getDepsPkgVersion('marmot-cli')
   }
 };

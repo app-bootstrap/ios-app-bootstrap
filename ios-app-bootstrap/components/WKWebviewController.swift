@@ -8,7 +8,7 @@
 
 import UIKit
 import WebKit
-import Logger
+import Logger_swift
 
 class WKWebviewController: UIViewController, WKNavigationDelegate {
     var webview: WKWebView!

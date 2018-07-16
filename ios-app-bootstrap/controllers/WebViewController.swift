@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Lottie
 
 class WebviewController: UITabBarController, UIWebViewDelegate, UIViewControllerTransitioningDelegate {
   

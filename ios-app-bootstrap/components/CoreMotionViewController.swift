@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Logger
+import Logger_swift
 import CoreMotion
 
 class CoreMotionViewController: UIViewController,UIAccelerometerDelegate {

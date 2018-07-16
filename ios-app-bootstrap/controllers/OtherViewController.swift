@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Logger
+import Logger_swift
 
 class OtherViewController: UITableViewController {
     let logger = Logger()

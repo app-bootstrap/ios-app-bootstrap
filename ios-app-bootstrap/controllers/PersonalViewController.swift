@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Logger
+import Logger_swift
 
 class PersonalViewController: ViewController , UIGestureRecognizerDelegate {
     let logger = Logger()

@@ -11,4 +11,13 @@ pod 'Logger.swift', :git => 'https://github.com/app-bootstrap/Logger.swift'
 
 end
 
+target 'ios-app-bootstrapTests' do
+
+pod 'Alamofire', '~> 4.7'
+pod 'CryptoSwift'
+pod 'lottie-ios'
+pod 'Logger.swift', :git => 'https://github.com/app-bootstrap/Logger.swift'
+
+end
+
 workspace 'ios-app-bootstrap.xcworkspace'

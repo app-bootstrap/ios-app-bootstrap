@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0798ED72CD41B09F8442E18B /* libPods-ios-app-bootstrap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A3EE95D54E47EC79C72F77 /* libPods-ios-app-bootstrap.a */; };
+		56406AA720FC2D9600630913 /* libPods-ios-app-bootstrap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56406AA620FC2D9600630913 /* libPods-ios-app-bootstrap.a */; };
 		63176F251DFD1C2F001F4106 /* UIGestureRecognizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63176F241DFD1C2F001F4106 /* UIGestureRecognizerViewController.swift */; };
 		63272ACC2027FF95006315CD /* DataHubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63272ACB2027FF95006315CD /* DataHubViewController.swift */; };
 		633E16AB1E039000000110F3 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633E16AA1E039000000110F3 /* AlertViewController.swift */; };
@@ -47,6 +47,7 @@
 		63F96D7A1C841F7200C95604 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F96D791C841F7200C95604 /* Const.swift */; };
 		63F96D7C1C84202B00C95604 /* static in Resources */ = {isa = PBXBuildFile; fileRef = 63F96D7B1C84202B00C95604 /* static */; };
 		63FCC3AA1FAF07800003D4D1 /* ios_app_bootstrapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FCC3A91FAF07800003D4D1 /* ios_app_bootstrapUITests.swift */; };
+		A64BF0B31806FFC35C3914E1 /* libPods-ios-app-bootstrapTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59FA7F617C9C4414720BEAAA /* libPods-ios-app-bootstrapTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,7 +69,10 @@
 
 /* Begin PBXFileReference section */
 		22DA0168E8CB20DA60DACFE0 /* Pods-ios-app-bootstrap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-app-bootstrap.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios-app-bootstrap/Pods-ios-app-bootstrap.release.xcconfig"; sourceTree = "<group>"; };
+		3F927839A6DCBF2028EE05C1 /* Pods-ios-app-bootstrapTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-app-bootstrapTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios-app-bootstrapTests/Pods-ios-app-bootstrapTests.release.xcconfig"; sourceTree = "<group>"; };
 		56406AA520FC2A5C00630913 /* ios-app-bootstrap-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ios-app-bootstrap-Bridging-Header.h"; sourceTree = "<group>"; };
+		56406AA620FC2D9600630913 /* libPods-ios-app-bootstrap.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libPods-ios-app-bootstrap.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		59FA7F617C9C4414720BEAAA /* libPods-ios-app-bootstrapTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ios-app-bootstrapTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63176F241DFD1C2F001F4106 /* UIGestureRecognizerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIGestureRecognizerViewController.swift; sourceTree = "<group>"; };
 		63272ACB2027FF95006315CD /* DataHubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHubViewController.swift; sourceTree = "<group>"; };
 		633E16AA1E039000000110F3 /* AlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +123,7 @@
 		63FCC3A91FAF07800003D4D1 /* ios_app_bootstrapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_app_bootstrapUITests.swift; sourceTree = "<group>"; };
 		63FCC3AB1FAF07800003D4D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77A3EE95D54E47EC79C72F77 /* libPods-ios-app-bootstrap.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ios-app-bootstrap.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		96D1A0939A8D28F05D03F8B6 /* Pods-ios-app-bootstrapTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-app-bootstrapTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ios-app-bootstrapTests/Pods-ios-app-bootstrapTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DFE987302E872537DB7027D9 /* Pods-ios-app-bootstrap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-app-bootstrap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ios-app-bootstrap/Pods-ios-app-bootstrap.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,7 +132,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0798ED72CD41B09F8442E18B /* libPods-ios-app-bootstrap.a in Frameworks */,
+				56406AA720FC2D9600630913 /* libPods-ios-app-bootstrap.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,6 +140,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A64BF0B31806FFC35C3914E1 /* libPods-ios-app-bootstrapTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,6 +301,8 @@
 			children = (
 				DFE987302E872537DB7027D9 /* Pods-ios-app-bootstrap.debug.xcconfig */,
 				22DA0168E8CB20DA60DACFE0 /* Pods-ios-app-bootstrap.release.xcconfig */,
+				96D1A0939A8D28F05D03F8B6 /* Pods-ios-app-bootstrapTests.debug.xcconfig */,
+				3F927839A6DCBF2028EE05C1 /* Pods-ios-app-bootstrapTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -302,11 +310,13 @@
 		DEC5E28CAB43C67CCB0313E1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				56406AA620FC2D9600630913 /* libPods-ios-app-bootstrap.a */,
 				638CE2A6209717F100F84CE7 /* Lottie.framework */,
 				63B458F51C9F06300074F4CE /* Logger.framework */,
 				63D638DB1C900FA9005B1E61 /* Alamofire.framework */,
 				63D638D71C900F55005B1E61 /* CryptoSwift.framework */,
 				77A3EE95D54E47EC79C72F77 /* libPods-ios-app-bootstrap.a */,
+				59FA7F617C9C4414720BEAAA /* libPods-ios-app-bootstrapTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -336,6 +346,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 63DA6D2A1B9941F600AFC15F /* Build configuration list for PBXNativeTarget "ios-app-bootstrapTests" */;
 			buildPhases = (
+				B042615736623811BC15D60C /* [CP] Check Pods Manifest.lock */,
 				63DA6D191B9941F600AFC15F /* Sources */,
 				63DA6D1A1B9941F600AFC15F /* Frameworks */,
 				63DA6D1B1B9941F600AFC15F /* Resources */,
@@ -380,7 +391,7 @@
 				TargetAttributes = {
 					63DA6D071B9941F600AFC15F = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = D8A9Y93768;
+						DevelopmentTeam = CM2CQ7U9GM;
 						LastSwiftMigration = 0810;
 					};
 					63DA6D1C1B9941F600AFC15F = {
@@ -465,6 +476,24 @@
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-ios-app-bootstrap-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B042615736623811BC15D60C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ios-app-bootstrapTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -666,12 +695,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = D8A9Y93768;
+				DEVELOPMENT_TEAM = CM2CQ7U9GM;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = "ios-app-bootstrap/Info.plist";
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				INFOPLIST_FILE = "ios-app-bootstrap/ios-app-bootstrap-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "xudafeng.$(PRODUCT_NAME:rfc1034identifier)";
@@ -687,12 +717,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = D8A9Y93768;
+				DEVELOPMENT_TEAM = CM2CQ7U9GM;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = "ios-app-bootstrap/Info.plist";
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				INFOPLIST_FILE = "ios-app-bootstrap/ios-app-bootstrap-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "xudafeng.$(PRODUCT_NAME:rfc1034identifier)";
@@ -704,12 +735,13 @@
 		};
 		63DA6D2B1B9941F600AFC15F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96D1A0939A8D28F05D03F8B6 /* Pods-ios-app-bootstrapTests.debug.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -719,24 +751,23 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "xudafeng.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ios-app-bootstrap.app/ios-app-bootstrap";
 			};
 			name = Debug;
 		};
 		63DA6D2C1B9941F600AFC15F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F927839A6DCBF2028EE05C1 /* Pods-ios-app-bootstrapTests.release.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				INFOPLIST_FILE = "ios-app-bootstrapTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "xudafeng.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ios-app-bootstrap.app/ios-app-bootstrap";
 			};
 			name = Release;
 		};

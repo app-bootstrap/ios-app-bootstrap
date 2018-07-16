@@ -35,3 +35,4 @@ pods/
 *.un~
 *.tgz
 *.llcov
+html/

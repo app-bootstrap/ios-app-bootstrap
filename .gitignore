@@ -30,6 +30,7 @@ screenshots/
 reports/
 reporter/
 package/
+pods/
 .*.sw[a-z]
 .sw?
 *.un~

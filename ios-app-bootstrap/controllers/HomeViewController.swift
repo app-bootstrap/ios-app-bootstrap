@@ -7,8 +7,7 @@
 //
 
 import UIKit
-import Logger
-
+import Logger_swift
 class HomeViewController: ViewController {
     let logger = Logger()
     

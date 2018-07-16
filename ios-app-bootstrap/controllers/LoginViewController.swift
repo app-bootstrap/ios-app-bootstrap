@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Logger
+import Logger_swift
 
 class LoginViewController: ViewController, UITextFieldDelegate {
     let logger = Logger()

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Logger
+import Logger_swift
 
 class ProgressBarView: UIView {
     let logger = Logger()

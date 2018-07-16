@@ -1,0 +1,36 @@
+PODS:
+  - Alamofire (4.7.2)
+  - CryptoSwift (0.10.0)
+  - Logger.swift (0.0.1)
+  - lottie-ios (2.5.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.7)
+  - CryptoSwift
+  - Logger.swift (from `https://github.com/app-bootstrap/Logger.swift`)
+  - lottie-ios
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - CryptoSwift
+    - lottie-ios
+
+EXTERNAL SOURCES:
+  Logger.swift:
+    :git: https://github.com/app-bootstrap/Logger.swift
+
+CHECKOUT OPTIONS:
+  Logger.swift:
+    :commit: f6fd3726452d1ca1e890c93eea4f70ea2f402501
+    :git: https://github.com/app-bootstrap/Logger.swift
+
+SPEC CHECKSUMS:
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  CryptoSwift: 6c778d69282bed3b4e975ff97a79d074f20bb011
+  Logger.swift: b8e108b8d003a394c5ab8482de752113691f3d82
+  lottie-ios: d699fdee68d7b63e721d949388b015fef1aaa4ac
+
+PODFILE CHECKSUM: 2471394c022709a24ad95bda507bf62c7e6a6a29
+
+COCOAPODS: 1.5.3

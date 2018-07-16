@@ -23,6 +23,11 @@ module.exports = {
     }
   ],
   testInfo: {
+    tests: 1,
+    passes: 1,
+    passPercent: 1,
+    linePercent: 1,
+    testHtmlReporterPath: 'html/index.html',
     coverageHtmlReporterPath: 'html/index.html'
   },
   extraInfo: {

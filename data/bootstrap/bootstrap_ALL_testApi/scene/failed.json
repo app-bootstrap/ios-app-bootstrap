@@ -1,0 +1,10 @@
+{
+  "sceneName": "failed",
+  "data": {
+    "success": false,
+    "errorMessage": "error message from server site",
+    "errorCode": 502
+  },
+  "interfaceUniqId": "9e716066-c116-44e3-90e2-1b8cb855339d",
+  "uniqId": "2805553a-963d-4fbf-8450-1da2c1a358be"
+}

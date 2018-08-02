@@ -1,0 +1,40 @@
+{
+  "type": "response",
+  "data": {
+    "schemaData": {
+      "type": "object",
+      "required": [
+        "success"
+      ],
+      "properties": {
+        "success": {
+          "type": "boolean",
+          "description": "success  flag form server side"
+        },
+        "data": {
+          "type": "string",
+          "description": "data from server side",
+          "required": [
+            "message"
+          ],
+          "properties": {
+            "message": {
+              "type": "string",
+              "description": "message form server side"
+            }
+          }
+        },
+        "errorMessage": {
+          "type": "string",
+          "description": "error message form server side"
+        },
+        "errorCode": {
+          "type": "number",
+          "description": "error code form server side"
+        }
+      }
+    }
+  },
+  "interfaceUniqId": "9e716066-c116-44e3-90e2-1b8cb855339d",
+  "uniqId": "ed037125-0222-41d4-9d5f-d502f429d1e9"
+}

@@ -42,6 +42,7 @@ class HomeViewController: ViewController {
         button.layer.cornerRadius = 2
         button.titleLabel!.font = UIFont(name: "Helvetica",size: 20)
         button.addTarget(self, action: #selector(HomeViewController.goList(_:)), for: .touchUpInside)
+        button.setTitleColor(Utils.getRGB(Const.COLOR_3), for: UIControlState())
         view.addSubview(button)
 
         let views:Dictionary<String, AnyObject>=["titleLabel": titleLabel, "button": button]

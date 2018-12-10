@@ -72,6 +72,7 @@ class ViewControllerSample3: UIViewController {
         button.layer.cornerRadius = 2
         button.titleLabel!.font = UIFont(name: "Helvetica",size: 14)
         button.setTitle("Button", for: UIControlState())
+        button.setTitleColor(Utils.getRGB(Const.COLOR_3), for: UIControlState())
         view.addSubview(button)
         
         titleLabel.textAlignment = .center

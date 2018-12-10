@@ -64,6 +64,7 @@ class LoginViewController: ViewController, UITextFieldDelegate {
         loginButton.layer.cornerRadius = 2
         loginButton.titleLabel!.font = UIFont(name: "Helvetica",size: 20)
         loginButton.addTarget(self, action: #selector(LoginViewController.login(_:)), for: .touchUpInside)
+        loginButton.setTitleColor(Utils.getRGB(Const.COLOR_3), for: UIControlState())
         view.addSubview(loginButton)
         
         let views:Dictionary<String, AnyObject>=["titleLabel": titleLabel, "userNameTextField": userNameTextField, "passwordTextField": passwordTextField, "loginButton": loginButton]

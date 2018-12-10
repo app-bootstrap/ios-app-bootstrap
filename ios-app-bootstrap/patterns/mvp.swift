@@ -62,6 +62,7 @@ class ViewControllerSample2: UIViewController, ViewSample2 {
         button.backgroundColor = Utils.getRGB(Const.COLOR_1)
         button.layer.cornerRadius = 2
         button.titleLabel!.font = UIFont(name: "Helvetica",size: 14)
+        button.setTitleColor(Utils.getRGB(Const.COLOR_3), for: UIControlState())
         button.setTitle("Button", for: UIControlState())
         view.addSubview(button)
         

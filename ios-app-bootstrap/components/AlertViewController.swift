@@ -29,7 +29,8 @@ class AlertViewController: UIViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.layer.cornerRadius = 2
         button.titleLabel!.font = UIFont(name: "Helvetica",size: 12)
-        
+        button.setTitleColor(Utils.getRGB(Const.COLOR_3), for: UIControlState())
+
         button.addTarget(self, action: #selector(AlertViewController.show(_:)), for: .touchUpInside)
         
         view.addSubview(button)

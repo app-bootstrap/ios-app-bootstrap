@@ -30,6 +30,7 @@ class DataHubViewController: UIViewController {
     button.layer.cornerRadius = 2
     button.titleLabel!.font = UIFont(name: "Helvetica",size: 16)
     button.addTarget(self, action: #selector(DataHubViewController.doRequest(_:)), for: .touchUpInside)
+    button.setTitleColor(Utils.getRGB(Const.COLOR_3), for: UIControlState())
     view.addSubview(button)
     
     let switchbutton = UIButton()
@@ -39,6 +40,7 @@ class DataHubViewController: UIViewController {
     switchbutton.layer.cornerRadius = 2
     switchbutton.titleLabel!.font = UIFont(name: "Helvetica",size: 16)
     switchbutton.addTarget(self, action: #selector(DataHubViewController.switchDataHubScene(_:)), for: .touchUpInside)
+    switchbutton.setTitleColor(Utils.getRGB(Const.COLOR_3), for: UIControlState())
     view.addSubview(switchbutton)
     
     textView.text = ""

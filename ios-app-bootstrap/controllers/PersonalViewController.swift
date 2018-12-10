@@ -77,6 +77,8 @@ class PersonalViewController: ViewController , UIGestureRecognizerDelegate {
         logoutButton.layer.cornerRadius = 2
         logoutButton.addTarget(self, action: #selector(PersonalViewController.logout(_:)), for: .touchUpInside)
         logoutButton.titleLabel!.font = UIFont(name: "Helvetica",size: 20)
+        logoutButton.setTitleColor(Utils.getRGB(Const.COLOR_3), for: UIControlState())
+
         view.addSubview(logoutButton)
         let views:Dictionary<String, AnyObject>=["logoutButton": logoutButton, "titleLabel": titleLabel, "avatarFeild": avatarFeild]
         view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-100-[titleLabel(<=20)]-[avatarFeild]-[logoutButton(<=40)]-100-|", options: NSLayoutFormatOptions(), metrics: nil, views: views))

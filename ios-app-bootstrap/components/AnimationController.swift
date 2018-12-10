@@ -35,6 +35,7 @@ class AnimationController: UIViewController {
         runButton.layer.cornerRadius = 2
         runButton.titleLabel!.font = UIFont(name: "Helvetica",size: 12)
         runButton.addTarget(self, action: #selector(AnimationController.runProgress), for: .touchUpInside)
+        runButton.setTitleColor(Utils.getRGB(Const.COLOR_3), for: UIControlState())
         buttonGroup.addSubview(runButton)
         
         let resetButton = UIButton()
@@ -44,6 +45,7 @@ class AnimationController: UIViewController {
         resetButton.layer.cornerRadius = 2
         resetButton.titleLabel!.font = UIFont(name: "Helvetica",size: 12)
         resetButton.addTarget(self, action: #selector(AnimationController.resetProgress), for: .touchUpInside)
+        resetButton.setTitleColor(Utils.getRGB(Const.COLOR_3), for: UIControlState())
         buttonGroup.addSubview(resetButton)
         
         let pauseButton = UIButton()
@@ -53,6 +55,7 @@ class AnimationController: UIViewController {
         pauseButton.layer.cornerRadius = 2
         pauseButton.titleLabel!.font = UIFont(name: "Helvetica",size: 12)
         pauseButton.addTarget(self, action: #selector(AnimationController.pauseProgress), for: .touchUpInside)
+        pauseButton.setTitleColor(Utils.getRGB(Const.COLOR_3), for: UIControlState())
         buttonGroup.addSubview(pauseButton)
         
         let reverseButton = UIButton()
@@ -62,6 +65,7 @@ class AnimationController: UIViewController {
         reverseButton.layer.cornerRadius = 2
         reverseButton.titleLabel!.font = UIFont(name: "Helvetica",size: 12)
         reverseButton.addTarget(self, action: #selector(AnimationController.reverseProgress), for: .touchUpInside)
+        reverseButton.setTitleColor(Utils.getRGB(Const.COLOR_3), for: UIControlState())
         buttonGroup.addSubview(reverseButton)
         
         let views:Dictionary<String, AnyObject>=["runButton": runButton, "resetButton": resetButton, "pauseButton": pauseButton, "reverseButton": reverseButton]

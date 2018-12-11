@@ -18,6 +18,11 @@ class HomeViewController: ViewController {
         initView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated);
+        self.tabBarController?.tabBar.isHidden = false;
+    }
+    
     func initNotification() {
         let notificationCenter = NotificationCenter.default
         let operationQueue = OperationQueue.main
@@ -54,6 +59,7 @@ class HomeViewController: ViewController {
     
     func goList(_ sender: UIButton) {
         navigationController?.pushViewController(OtherViewController(), animated: true)
+        self.tabBarController?.tabBar.isHidden = true;
     }
 }
 

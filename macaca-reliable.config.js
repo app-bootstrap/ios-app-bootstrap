@@ -1,11 +1,11 @@
 'use strict';
 
-const helper = require('marmot-cli/lib/helper');
+const helper = require('reliable-cli/lib/helper');
 
 const {
   iosUtils,
   getDepsPkgVersion,
-} = require('marmot-cli/lib/helper');
+} = require('reliable-cli/lib/helper');
 
 const pkg = require('./package');
 
@@ -31,6 +31,6 @@ module.exports = {
     coverageHtmlReporterPath: 'html/index.html'
   },
   extraInfo: {
-    'marmot-cli': getDepsPkgVersion('marmot-cli')
+    'reliable-cli': getDepsPkgVersion('reliable-cli')
   }
 };

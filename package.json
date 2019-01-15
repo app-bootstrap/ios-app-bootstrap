@@ -16,10 +16,10 @@
   },
   "devDependencies": {
     "macaca-datahub": "2",
-    "marmot-cli": "1"
+    "reliable-cli": "1"
   },
   "scripts": {
-    "marmot": "marmot report -c ./marmot.config.js"
+    "reliable": "reliable report -c ./reliable.config.js"
   },
   "license": "MIT"
 }

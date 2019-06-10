@@ -59,7 +59,7 @@ class LoginViewController: ViewController, UITextFieldDelegate {
         
         let loginButton = UIButton()
         loginButton.backgroundColor = Utils.getRGB(Const.COLOR_1)
-        loginButton.setTitle("Login", for: UIControlState())
+        loginButton.setTitle("Login", for: UIControl.State())
         loginButton.translatesAutoresizingMaskIntoConstraints = false
         loginButton.layer.cornerRadius = 2
         loginButton.titleLabel!.font = UIFont(name: "Helvetica",size: 20)
@@ -68,14 +68,14 @@ class LoginViewController: ViewController, UITextFieldDelegate {
         
         let views:Dictionary<String, AnyObject>=["titleLabel": titleLabel, "userNameTextField": userNameTextField, "passwordTextField": passwordTextField, "loginButton": loginButton]
         
-        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-100-[titleLabel(<=20)]-30-[userNameTextField(<=50)]-10-[passwordTextField(<=50)]-50-[loginButton(<=40)]-100-|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
-        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[titleLabel]-|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
-        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[userNameTextField]-|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
-        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[passwordTextField]-|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
-        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[loginButton]-|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-100-[titleLabel(<=20)]-30-[userNameTextField(<=50)]-10-[passwordTextField(<=50)]-50-[loginButton(<=40)]-100-|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: views))
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[titleLabel]-|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: views))
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[userNameTextField]-|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: views))
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[passwordTextField]-|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: views))
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[loginButton]-|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: views))
     }
     
-    func login(_ sender: UIButton) {
+    @objc func login(_ sender: UIButton) {
         logger.info("login")
         Utils.setData("login", value: "login")
         let tabBar = TabBarController()

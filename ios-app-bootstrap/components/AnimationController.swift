@@ -30,7 +30,7 @@ class AnimationController: UIViewController {
 
         let runButton = UIButton()
         runButton.backgroundColor = Utils.getRGB(Const.COLOR_1)
-        runButton.setTitle("run", for: UIControlState())
+        runButton.setTitle("run", for: UIControl.State())
         runButton.translatesAutoresizingMaskIntoConstraints = false
         runButton.layer.cornerRadius = 2
         runButton.titleLabel!.font = UIFont(name: "Helvetica",size: 12)
@@ -39,7 +39,7 @@ class AnimationController: UIViewController {
         
         let resetButton = UIButton()
         resetButton.backgroundColor = Utils.getRGB(Const.COLOR_1)
-        resetButton.setTitle("reset", for: UIControlState())
+        resetButton.setTitle("reset", for: UIControl.State())
         resetButton.translatesAutoresizingMaskIntoConstraints = false
         resetButton.layer.cornerRadius = 2
         resetButton.titleLabel!.font = UIFont(name: "Helvetica",size: 12)
@@ -48,7 +48,7 @@ class AnimationController: UIViewController {
         
         let pauseButton = UIButton()
         pauseButton.backgroundColor = Utils.getRGB(Const.COLOR_2)
-        pauseButton.setTitle("pause", for: UIControlState())
+        pauseButton.setTitle("pause", for: UIControl.State())
         pauseButton.translatesAutoresizingMaskIntoConstraints = false
         pauseButton.layer.cornerRadius = 2
         pauseButton.titleLabel!.font = UIFont(name: "Helvetica",size: 12)
@@ -57,7 +57,7 @@ class AnimationController: UIViewController {
         
         let reverseButton = UIButton()
         reverseButton.backgroundColor = Utils.getRGB(Const.COLOR_1)
-        reverseButton.setTitle("reverse", for: UIControlState())
+        reverseButton.setTitle("reverse", for: UIControl.State())
         reverseButton.translatesAutoresizingMaskIntoConstraints = false
         reverseButton.layer.cornerRadius = 2
         reverseButton.titleLabel!.font = UIFont(name: "Helvetica",size: 12)
@@ -66,32 +66,32 @@ class AnimationController: UIViewController {
         
         let views:Dictionary<String, AnyObject>=["runButton": runButton, "resetButton": resetButton, "pauseButton": pauseButton, "reverseButton": reverseButton]
         
-        buttonGroup.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-[runButton(<=20)]-|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
+        buttonGroup.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-[runButton(<=20)]-|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: views))
         
-        buttonGroup.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-[resetButton(<=20)]-|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
+        buttonGroup.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-[resetButton(<=20)]-|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: views))
         
-        buttonGroup.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-[pauseButton(<=20)]-|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
+        buttonGroup.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-[pauseButton(<=20)]-|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: views))
         
-        buttonGroup.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-[reverseButton(<=20)]-|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
+        buttonGroup.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-[reverseButton(<=20)]-|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: views))
         
-        buttonGroup.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[runButton(<=60)]-[resetButton(<=60)]-[pauseButton(<=60)]-[reverseButton(<=60)]-|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
+        buttonGroup.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[runButton(<=60)]-[resetButton(<=60)]-[pauseButton(<=60)]-[reverseButton(<=60)]-|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: views))
         
         view.addSubview(buttonGroup)
     }
     
-    func runProgress() {
+    @objc func runProgress() {
         progressBarView.run()
     }
     
-    func resetProgress() {
+    @objc func resetProgress() {
         progressBarView.reset()
     }
     
-    func pauseProgress() {
+    @objc func pauseProgress() {
         progressBarView.pause()
     }
     
-    func reverseProgress() {
+    @objc func reverseProgress() {
         progressBarView.reverse()
     }
 }

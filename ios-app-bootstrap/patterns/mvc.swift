@@ -24,7 +24,7 @@ class ViewControllerSample1: UIViewController {
         initView()
     }
     
-    func didTapButton(_ button: UIButton) {
+    @objc func didTapButton(_ button: UIButton) {
         titleLabel.text = "site:\(data.site); github: \(data.githubId)"
     }
     
@@ -35,7 +35,7 @@ class ViewControllerSample1: UIViewController {
         button.backgroundColor = Utils.getRGB(Const.COLOR_1)
         button.layer.cornerRadius = 2
         button.titleLabel!.font = UIFont(name: "Helvetica",size: 14)
-        button.setTitle("Button", for: UIControlState())
+        button.setTitle("Button", for: UIControl.State())
         view.addSubview(button)
         
         titleLabel.textAlignment = .center
@@ -45,9 +45,9 @@ class ViewControllerSample1: UIViewController {
         
         let views:Dictionary<String, AnyObject>=["titleLabel": titleLabel, "button": button]
         
-        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-100-[titleLabel(<=40)]-[button(<=40)]-100-|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
-        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[button]-|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-100-[titleLabel(<=40)]-[button(<=40)]-100-|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: views))
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[button]-|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: views))
         
-        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[titleLabel]-|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[titleLabel]-|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: views))
     }
 }

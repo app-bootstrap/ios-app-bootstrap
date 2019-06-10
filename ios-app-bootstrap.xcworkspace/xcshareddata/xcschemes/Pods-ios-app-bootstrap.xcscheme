@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "65A2A0FEF472A5C05801E66717841F88"
-               BuildableName = "libPods-ios-app-bootstrap.a"
+               BlueprintIdentifier = "6A6CD4DE99A926C008F60452F5F6F02E"
+               BuildableName = "Pods_ios_app_bootstrap.framework"
                BlueprintName = "Pods-ios-app-bootstrap"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
             </BuildableReference>
@@ -46,8 +46,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "65A2A0FEF472A5C05801E66717841F88"
-            BuildableName = "libPods-ios-app-bootstrap.a"
+            BlueprintIdentifier = "6A6CD4DE99A926C008F60452F5F6F02E"
+            BuildableName = "Pods_ios_app_bootstrap.framework"
             BlueprintName = "Pods-ios-app-bootstrap"
             ReferencedContainer = "container:Pods/Pods.xcodeproj">
          </BuildableReference>

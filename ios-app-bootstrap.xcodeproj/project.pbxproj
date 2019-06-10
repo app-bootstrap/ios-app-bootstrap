@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		56406AA720FC2D9600630913 /* libPods-ios-app-bootstrap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56406AA620FC2D9600630913 /* libPods-ios-app-bootstrap.a */; };
+		182F1EA3D27E5D472EAFD009 /* Pods_ios_app_bootstrapTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 023EFEC652D66134D4AB497D /* Pods_ios_app_bootstrapTests.framework */; };
 		63176F251DFD1C2F001F4106 /* UIGestureRecognizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63176F241DFD1C2F001F4106 /* UIGestureRecognizerViewController.swift */; };
 		63272ACC2027FF95006315CD /* DataHubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63272ACB2027FF95006315CD /* DataHubViewController.swift */; };
 		633E16AB1E039000000110F3 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633E16AA1E039000000110F3 /* AlertViewController.swift */; };
@@ -47,7 +47,7 @@
 		63F96D7A1C841F7200C95604 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F96D791C841F7200C95604 /* Const.swift */; };
 		63F96D7C1C84202B00C95604 /* static in Resources */ = {isa = PBXBuildFile; fileRef = 63F96D7B1C84202B00C95604 /* static */; };
 		63FCC3AA1FAF07800003D4D1 /* ios_app_bootstrapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FCC3A91FAF07800003D4D1 /* ios_app_bootstrapUITests.swift */; };
-		A64BF0B31806FFC35C3914E1 /* libPods-ios-app-bootstrapTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59FA7F617C9C4414720BEAAA /* libPods-ios-app-bootstrapTests.a */; };
+		C68D6BB3DC510C765465C005 /* Pods_ios_app_bootstrap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59EE92DB2B0233C934E5E10 /* Pods_ios_app_bootstrap.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,11 +68,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		023EFEC652D66134D4AB497D /* Pods_ios_app_bootstrapTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_app_bootstrapTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		22DA0168E8CB20DA60DACFE0 /* Pods-ios-app-bootstrap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-app-bootstrap.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios-app-bootstrap/Pods-ios-app-bootstrap.release.xcconfig"; sourceTree = "<group>"; };
 		3F927839A6DCBF2028EE05C1 /* Pods-ios-app-bootstrapTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-app-bootstrapTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios-app-bootstrapTests/Pods-ios-app-bootstrapTests.release.xcconfig"; sourceTree = "<group>"; };
 		56406AA520FC2A5C00630913 /* ios-app-bootstrap-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ios-app-bootstrap-Bridging-Header.h"; sourceTree = "<group>"; };
-		56406AA620FC2D9600630913 /* libPods-ios-app-bootstrap.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libPods-ios-app-bootstrap.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		59FA7F617C9C4414720BEAAA /* libPods-ios-app-bootstrapTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ios-app-bootstrapTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63176F241DFD1C2F001F4106 /* UIGestureRecognizerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIGestureRecognizerViewController.swift; sourceTree = "<group>"; };
 		63272ACB2027FF95006315CD /* DataHubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHubViewController.swift; sourceTree = "<group>"; };
 		633E16AA1E039000000110F3 /* AlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +123,7 @@
 		63FCC3AB1FAF07800003D4D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77A3EE95D54E47EC79C72F77 /* libPods-ios-app-bootstrap.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ios-app-bootstrap.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		96D1A0939A8D28F05D03F8B6 /* Pods-ios-app-bootstrapTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-app-bootstrapTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ios-app-bootstrapTests/Pods-ios-app-bootstrapTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B59EE92DB2B0233C934E5E10 /* Pods_ios_app_bootstrap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_app_bootstrap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFE987302E872537DB7027D9 /* Pods-ios-app-bootstrap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-app-bootstrap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ios-app-bootstrap/Pods-ios-app-bootstrap.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -132,7 +132,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56406AA720FC2D9600630913 /* libPods-ios-app-bootstrap.a in Frameworks */,
+				C68D6BB3DC510C765465C005 /* Pods_ios_app_bootstrap.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,7 +140,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A64BF0B31806FFC35C3914E1 /* libPods-ios-app-bootstrapTests.a in Frameworks */,
+				182F1EA3D27E5D472EAFD009 /* Pods_ios_app_bootstrapTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,13 +310,13 @@
 		DEC5E28CAB43C67CCB0313E1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				56406AA620FC2D9600630913 /* libPods-ios-app-bootstrap.a */,
 				638CE2A6209717F100F84CE7 /* Lottie.framework */,
 				63B458F51C9F06300074F4CE /* Logger.framework */,
 				63D638DB1C900FA9005B1E61 /* Alamofire.framework */,
 				63D638D71C900F55005B1E61 /* CryptoSwift.framework */,
 				77A3EE95D54E47EC79C72F77 /* libPods-ios-app-bootstrap.a */,
-				59FA7F617C9C4414720BEAAA /* libPods-ios-app-bootstrapTests.a */,
+				B59EE92DB2B0233C934E5E10 /* Pods_ios_app_bootstrap.framework */,
+				023EFEC652D66134D4AB497D /* Pods_ios_app_bootstrapTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -332,6 +332,7 @@
 				63DA6D041B9941F600AFC15F /* Sources */,
 				63DA6D051B9941F600AFC15F /* Frameworks */,
 				63DA6D061B9941F600AFC15F /* Resources */,
+				B465D0BC4A363D3511503941 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -350,6 +351,7 @@
 				63DA6D191B9941F600AFC15F /* Sources */,
 				63DA6D1A1B9941F600AFC15F /* Frameworks */,
 				63DA6D1B1B9941F600AFC15F /* Resources */,
+				BB530973964ED608B2E80FE8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -391,17 +393,18 @@
 				TargetAttributes = {
 					63DA6D071B9941F600AFC15F = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = CM2CQ7U9GM;
+						DevelopmentTeam = CX3H4H7MSH;
 						LastSwiftMigration = 0810;
 					};
 					63DA6D1C1B9941F600AFC15F = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = CX3H4H7MSH;
 						LastSwiftMigration = 0810;
 						TestTargetID = 63DA6D071B9941F600AFC15F;
 					};
 					63FCC3A61FAF07800003D4D1 = {
 						CreatedOnToolsVersion = 9.1;
-						DevelopmentTeam = D8A9Y93768;
+						DevelopmentTeam = CX3H4H7MSH;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 63DA6D071B9941F600AFC15F;
 					};
@@ -412,6 +415,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -498,6 +502,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B465D0BC4A363D3511503941 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ios-app-bootstrap/Pods-ios-app-bootstrap-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Logger.swift/Logger_swift.framework",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Logger_swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ios-app-bootstrap/Pods-ios-app-bootstrap-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB530973964ED608B2E80FE8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ios-app-bootstrapTests/Pods-ios-app-bootstrapTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Logger.swift/Logger_swift.framework",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Logger_swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ios-app-bootstrapTests/Pods-ios-app-bootstrapTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -695,7 +747,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = CM2CQ7U9GM;
+				DEVELOPMENT_TEAM = CX3H4H7MSH;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -704,10 +756,10 @@
 				INFOPLIST_FILE = "ios-app-bootstrap/ios-app-bootstrap-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "xudafeng.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "xudafeng.ios-app-bootstrap1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ios-app-bootstrap/ios-app-bootstrap-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -717,7 +769,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = CM2CQ7U9GM;
+				DEVELOPMENT_TEAM = CX3H4H7MSH;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -726,10 +778,10 @@
 				INFOPLIST_FILE = "ios-app-bootstrap/ios-app-bootstrap-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "xudafeng.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "xudafeng.ios-app-bootstrap1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ios-app-bootstrap/ios-app-bootstrap-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -737,6 +789,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 96D1A0939A8D28F05D03F8B6 /* Pods-ios-app-bootstrapTests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = CX3H4H7MSH;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -750,7 +803,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "xudafeng.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -758,6 +811,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3F927839A6DCBF2028EE05C1 /* Pods-ios-app-bootstrapTests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = CX3H4H7MSH;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -767,7 +821,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "xudafeng.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -788,15 +842,16 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = D8A9Y93768;
+				DEVELOPMENT_TEAM = CX3H4H7MSH;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "ios-app-bootstrapUITests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "xdf.ios-app-bootstrapUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "ios-app-bootstrap";
 			};
@@ -818,14 +873,15 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = D8A9Y93768;
+				DEVELOPMENT_TEAM = CX3H4H7MSH;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "ios-app-bootstrapUITests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "xdf.ios-app-bootstrapUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "ios-app-bootstrap";
 			};

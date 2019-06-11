@@ -7,11 +7,9 @@
 //
 
 import UIKit
-import Logger_swift
 import Alamofire
 
 class DataHubViewController: UIViewController {
-  let logger = Logger()
   let textView = UITextView()
   
   override func viewDidLoad() {
@@ -25,7 +23,7 @@ class DataHubViewController: UIViewController {
     
     let button = UIButton()
     button.backgroundColor = Utils.getRGB(Const.COLOR_1)
-    button.setTitle("request", for: UIControlState())
+    button.setTitle("request", for: UIControl.State())
     button.translatesAutoresizingMaskIntoConstraints = false
     button.layer.cornerRadius = 2
     button.titleLabel!.font = UIFont(name: "Helvetica",size: 16)
@@ -34,7 +32,7 @@ class DataHubViewController: UIViewController {
     
     let switchbutton = UIButton()
     switchbutton.backgroundColor = Utils.getRGB(Const.COLOR_1)
-    switchbutton.setTitle("swich scene", for: UIControlState())
+    switchbutton.setTitle("swich scene", for: UIControl.State())
     switchbutton.translatesAutoresizingMaskIntoConstraints = false
     switchbutton.layer.cornerRadius = 2
     switchbutton.titleLabel!.font = UIFont(name: "Helvetica",size: 16)
@@ -54,13 +52,13 @@ class DataHubViewController: UIViewController {
       "switchbutton": switchbutton
     ]
     
-    view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-100-[button(<=30)]-10-[switchbutton(<=30)]-10-[textView(<=200)]-300-|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
-    view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[textView]-|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
-    view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-120-[button]-120-|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
-    view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-120-[switchbutton]-120-|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
+    view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-100-[button(<=30)]-10-[switchbutton(<=30)]-10-[textView(<=200)]-300-|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: views))
+    view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[textView]-|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: views))
+    view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-120-[button]-120-|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: views))
+    view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-120-[switchbutton]-120-|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: views))
   }
   
-  func doRequest(_ sender: UIButton) {
+    @objc func doRequest(_ sender: UIButton) {
     let parameters: Parameters = [
       "foo": "bar"
     ]
@@ -74,7 +72,7 @@ class DataHubViewController: UIViewController {
       }
   }
 
-  func switchDataHubScene(_ sender: UIButton) {
+    @objc func switchDataHubScene(_ sender: UIButton) {
     
     // TODO switch scene
   }

@@ -7,13 +7,12 @@
 //
 
 import UIKit
-import Logger_swift
 
 class Utils: NSObject {
 
     class func getImgView(_ ImgName: NSString)->UIImage{
         var image:UIImage = UIImage(named: ImgName as String)!
-        image = image.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
+        image = image.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
         return image
     }
     

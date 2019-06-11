@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Lottie
 
 class WebviewController: UITabBarController, UIWebViewDelegate, UIViewControllerTransitioningDelegate {
   
@@ -15,7 +16,7 @@ class WebviewController: UITabBarController, UIWebViewDelegate, UIViewController
   private var _webview = Webview()
   private var _loaded = false
   private var maskView: UIView?
-  private var lottieAnimation: LOTAnimationView?
+  private var lottieAnimation: AnimationView?
   
   init(urlString: String, title: String, autoLoad: Bool) {
     _urlString = urlString
@@ -61,7 +62,7 @@ class WebviewController: UITabBarController, UIWebViewDelegate, UIViewController
     
     maskView = UIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height))
     maskView?.backgroundColor = Utils.getRGB("#ffffff")
-    lottieAnimation = LOTAnimationView(name: "static/loading")
+    lottieAnimation = AnimationView(name: "static/loading")
     // Set view to full screen, aspectFill
     lottieAnimation!.autoresizingMask = [.flexibleHeight, .flexibleWidth]
     lottieAnimation!.contentMode = .scaleAspectFill
@@ -71,8 +72,8 @@ class WebviewController: UITabBarController, UIWebViewDelegate, UIViewController
     _webview.addSubview(maskView!)
   
     //Play the first portion of the animation on loop until the download finishes.
-    lottieAnimation!.loopAnimation = true
-    lottieAnimation!.play(fromProgress: 0, toProgress: 0.5, withCompletion: nil)
+    lottieAnimation!.loopMode = LottieLoopMode.loop
+    lottieAnimation!.play(fromProgress: 0, toProgress: 0.5, completion: nil)
   }
   
   func _setTitle(_ title: String) {
@@ -81,7 +82,7 @@ class WebviewController: UITabBarController, UIWebViewDelegate, UIViewController
   
   func webViewDidStartLoad(_ webView: UIWebView) {
     lottieAnimation!.pause()
-    lottieAnimation!.loopAnimation = true
+    lottieAnimation!.loopMode = LottieLoopMode.loop
     lottieAnimation!.frame = CGRect(x: (self.view.frame.width - 100) / 2, y: (self.view.frame.height - 200) / 2, width: 100, height: 100)
     // Speed up animation to finish out the current loop.
     lottieAnimation!.animationSpeed = 2
@@ -90,7 +91,7 @@ class WebviewController: UITabBarController, UIWebViewDelegate, UIViewController
   
   func webViewDidFinishLoad(_ webView: UIWebView) {
     lottieAnimation?.pause()
-    lottieAnimation!.loopAnimation = false
+    lottieAnimation!.loopMode = LottieLoopMode.playOnce
     
     lottieAnimation!.play(toProgress: 1) {[weak self] (_) in
       self!.maskView!.removeFromSuperview()
@@ -105,7 +106,7 @@ class WebviewController: UITabBarController, UIWebViewDelegate, UIViewController
     }
   }
   
-  func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+    private func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebView.NavigationType) -> Bool {
     let url = request.mainDocumentURL
     let scheme = request.url?.scheme
     

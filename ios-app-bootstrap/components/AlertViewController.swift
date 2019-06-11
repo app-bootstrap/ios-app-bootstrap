@@ -7,10 +7,8 @@
 //
 
 import UIKit
-import Logger_swift
 
 class AlertViewController: UIViewController {
-    let logger = Logger()
     let button = UIButton()
     
     override func viewDidLoad() {
@@ -25,7 +23,7 @@ class AlertViewController: UIViewController {
         view.backgroundColor = UIColor.white
         
         button.backgroundColor = Utils.getRGB(Const.COLOR_1)
-        button.setTitle("show", for: UIControlState())
+        button.setTitle("show", for: UIControl.State())
         button.translatesAutoresizingMaskIntoConstraints = false
         button.layer.cornerRadius = 2
         button.titleLabel!.font = UIFont(name: "Helvetica",size: 12)
@@ -36,13 +34,13 @@ class AlertViewController: UIViewController {
         
         let views:Dictionary<String, AnyObject>=["button": button]
         
-        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-100-[button(<=20)]-|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-100-[button(<=20)]-|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: views))
         
-        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-120-[button]-120-|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-120-[button]-120-|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: views))
         showAlert()
     }
     
-    func show(_ sender: UIButton) {
+    @objc func show(_ sender: UIButton) {
         showAlert()
 
     }

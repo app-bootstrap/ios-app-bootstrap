@@ -9,6 +9,6 @@
 #ifndef ios_app_bootstrap_Bridging_Header_h
 #define ios_app_bootstrap_Bridging_Header_h
 
-#import <lottie/lottie.h>
+// #import <lottie/lottie.h>
 
 #endif /* ios_app_bootstrap_Bridging_Header_h */

@@ -31,7 +31,7 @@ class ProgressBarView: UIView {
         backgroundColor = UIColor.clear
     }
     
-    func update() {
+    @objc func update() {
         logger.debug("currentProgress:", currentProgress)
         
         if (currentProgress >= 360 || currentProgress <= -360) {

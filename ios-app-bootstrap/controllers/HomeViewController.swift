@@ -21,7 +21,7 @@ class HomeViewController: ViewController {
     func initNotification() {
         let notificationCenter = NotificationCenter.default
         let operationQueue = OperationQueue.main
-        _ = notificationCenter.addObserver(forName: NSNotification.Name.UIApplicationDidEnterBackground, object: nil, queue: operationQueue, using: {
+        _ = notificationCenter.addObserver(forName: UIApplication.didEnterBackgroundNotification, object: nil, queue: operationQueue, using: {
             (notification: Notification!) in self.logger.info("run in background from Home")
         })
     }
@@ -37,7 +37,7 @@ class HomeViewController: ViewController {
         
         let button = UIButton()
         button.backgroundColor = Utils.getRGB(Const.COLOR_1)
-        button.setTitle("list", for: UIControlState())
+        button.setTitle("list", for: UIControl.State())
         button.translatesAutoresizingMaskIntoConstraints = false
         button.layer.cornerRadius = 2
         button.titleLabel!.font = UIFont(name: "Helvetica",size: 20)
@@ -46,12 +46,12 @@ class HomeViewController: ViewController {
 
         let views:Dictionary<String, AnyObject>=["titleLabel": titleLabel, "button": button]
         
-        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-100-[titleLabel(<=20)]-[button(<=40)]-100-|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
-        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[titleLabel]-|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
-        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[button]-|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-100-[titleLabel(<=20)]-[button(<=40)]-100-|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: views))
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[titleLabel]-|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: views))
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[button]-|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: views))
     }
     
-    func goList(_ sender: UIButton) {
+    @objc func goList(_ sender: UIButton) {
         navigationController?.pushViewController(OtherViewController(), animated: true)
     }
 }

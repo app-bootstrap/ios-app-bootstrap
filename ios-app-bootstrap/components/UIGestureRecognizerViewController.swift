@@ -90,23 +90,23 @@ class UIGestureRecognizerViewController: UIViewController {
         text.text = "event: \(name)\n\n\(other)";
     }
     
-    func tapSingleDid(_ recognizer:UISwipeGestureRecognizer) {
+    @objc func tapSingleDid(_ recognizer:UISwipeGestureRecognizer) {
         let point = recognizer.location(in: view)
         printInfo(name: "singleTap", other: "x:\(point.x) y:\(point.y)")
     }
     
-    func tapDoubleDid(_ recognizer:UISwipeGestureRecognizer) {
+    @objc func tapDoubleDid(_ recognizer:UISwipeGestureRecognizer) {
         let point = recognizer.location(in: view)
         printInfo(name: "doubleTap", other: "x:\(point.x) y:\(point.y)")
     }
     
-    func rotationDid(_ recognizer:UIRotationGestureRecognizer) {
+    @objc func rotationDid(_ recognizer:UIRotationGestureRecognizer) {
         let point = recognizer.location(in: view)
         let rotation = recognizer.rotation * (180 / CGFloat(M_PI))
         printInfo(name: "rotation", other: "x:\(point.x) y:\(point.y)\nrotation:\(rotation)")
     }
     
-    func longPressDid(_ recognizer: UILongPressGestureRecognizer) {
+    @objc func longPressDid(_ recognizer: UILongPressGestureRecognizer) {
         let point = recognizer.location(in: view)
         if recognizer.state == .began {
             printInfo(name: "longPress", other: "x:\(point.x) y:\(point.y)\nstate: start")
@@ -115,12 +115,12 @@ class UIGestureRecognizerViewController: UIViewController {
         }
     }
     
-    func pinchDid(_ recognizer:UIPinchGestureRecognizer) {
+    @objc func pinchDid(_ recognizer:UIPinchGestureRecognizer) {
         let point = recognizer.location(in: view)
         printInfo(name: "pinch", other: "x:\(point.x) y:\(point.y)\nscale: \(recognizer.scale)")
     }
     
-    func swipeDid(_ recognizer:UISwipeGestureRecognizer) {
+    @objc func swipeDid(_ recognizer:UISwipeGestureRecognizer) {
         let point = recognizer.location(in: view)
         var temp:String = ""
         
@@ -137,7 +137,7 @@ class UIGestureRecognizerViewController: UIViewController {
         
     }
     
-    func panDid(_ recognizer:UISwipeGestureRecognizer) {
+    @objc func panDid(_ recognizer:UISwipeGestureRecognizer) {
         let point = recognizer.location(in: view)
         rect.center = point
         printInfo(name: "drag", other: "x:\(point.x) y:\(point.y)\n")

@@ -23,7 +23,7 @@ class ToastViewController: UIViewController {
         
         let button = UIButton()
         button.backgroundColor = Utils.getRGB(Const.COLOR_1)
-        button.setTitle("show", for: UIControlState())
+        button.setTitle("show", for: UIControl.State())
         button.translatesAutoresizingMaskIntoConstraints = false
         button.layer.cornerRadius = 2
         button.titleLabel!.font = UIFont(name: "Helvetica",size: 12)
@@ -32,9 +32,9 @@ class ToastViewController: UIViewController {
         
         let views:Dictionary<String, AnyObject>=["button": button]
         
-        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-100-[button(<=20)]-|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-100-[button(<=20)]-|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: views))
         
-        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-120-[button]-120-|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-120-[button]-120-|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: views))
         showToast()
         
     }
@@ -43,7 +43,7 @@ class ToastViewController: UIViewController {
         view.makeToast(message: "this is toast", duration: 3, position: HRToastPositionCenter as AnyObject)
     }
     
-    func show(_ sender: UIButton) {
+    @objc func show(_ sender: UIButton) {
         showToast()
     }
 }

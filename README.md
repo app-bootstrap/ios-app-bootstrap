@@ -9,9 +9,15 @@ A starting tutorial for iOS application with Swift.
 ## Build
 
 ```bash
-$ carthage update --platform iOS --verbose
-$ xcodebuild -project ios-app-bootstrap.xcodeproj -sdk iphonesimulator
+$ pod install
+$ xcodebuild -workspace ios-app-bootstrap.xcworkspace -scheme ios-app-bootstrap -sdk iphonesimulator
 ```
+
+## Install on real device
+
+- Run `pod install`.
+- Open `ios-app-bootstrap.xcworkspace` using Xcode
+- Run `ios-app-bootstrap` on your device.
 
 ## Datahub
 

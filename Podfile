@@ -1,7 +1,8 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
-platform :ios, '9.0'
+platform :ios, '11.4'
 use_frameworks!
+inhibit_all_warnings!
 
 target 'ios-app-bootstrap' do
 

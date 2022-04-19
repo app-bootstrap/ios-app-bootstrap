@@ -43,13 +43,6 @@ $ make coverage
 
 npmcdn.com: [ios-app-bootstrap.zip](//npmcdn.com/ios-app-bootstrap@latest/build/ios-app-bootstrap.zip)
 
-## Update Contributor
-
-```bash
-$ npm i git-contributor -g
-$ git-contributor
-```
-
 <!-- GITCONTRIBUTOR_START -->
 
 ## Contributors

@@ -8,8 +8,9 @@
 
 import UIKit
 import Lottie
+import Logger_swift
 
-class WebviewController: UITabBarController, UIWebViewDelegate, UIViewControllerTransitioningDelegate {
+class WebviewController: UITabBarController, UIWebViewDelegate, UIViewControllerTransitioningDelegate, UITextFieldDelegate {
   
   private var _urlString: String
   private var _title: String
@@ -17,6 +18,7 @@ class WebviewController: UITabBarController, UIWebViewDelegate, UIViewController
   private var _loaded = false
   private var maskView: UIView?
   private var lottieAnimation: AnimationView?
+    let logger = Logger()
   
   init(urlString: String, title: String, autoLoad: Bool) {
     _urlString = urlString
@@ -44,6 +46,11 @@ class WebviewController: UITabBarController, UIWebViewDelegate, UIViewController
     super.viewDidLoad()
     _setTitle(_title)
     initView()
+    NotificationCenter.default.addObserver(self, selector: #selector(changeInputMode(sender:)), name: UITextInputMode.currentInputModeDidChangeNotification, object: nil)
+  }
+    
+  @objc func changeInputMode(sender: NSNotification) {
+      logger.info("changeInputMode:")
   }
   
   func startLoad() {

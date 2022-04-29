@@ -116,8 +116,7 @@ class PersonalViewController: ViewController , UIGestureRecognizerDelegate {
     @objc func logout(_ sender: UIButton) {
         Utils.removeData("login")
         let loginController = LoginViewController()
+        loginController.modalPresentationStyle = .fullScreen
         navigationController?.present(loginController, animated: true, completion: nil)
-    }
-    
+    }    
 }
-

@@ -29,6 +29,7 @@
 		63894CC01B99782700464AB0 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63894CBF1B99782700464AB0 /* Utils.swift */; };
 		63894CD31B997D5400464AB0 /* Webview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63894CD21B997D5400464AB0 /* Webview.swift */; };
 		638BE8691E6C2245009EC0F3 /* CoreMotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638BE8681E6C2245009EC0F3 /* CoreMotionViewController.swift */; };
+		63B054EE2818E3FF000C80CB /* DictationRecognitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B054ED2818E3FF000C80CB /* DictationRecognitionController.swift */; };
 		63D5C3F31C9980B1008DE710 /* avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 63D5C3F21C9980B1008DE710 /* avatar.png */; };
 		63D638E21C901046005B1E61 /* tab_home_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 63D638DE1C901046005B1E61 /* tab_home_btn@2x.png */; };
 		63D638E31C901046005B1E61 /* tab_home_selected_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 63D638DF1C901046005B1E61 /* tab_home_selected_btn@2x.png */; };
@@ -92,6 +93,7 @@
 		63894CBF1B99782700464AB0 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		63894CD21B997D5400464AB0 /* Webview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Webview.swift; sourceTree = "<group>"; };
 		638BE8681E6C2245009EC0F3 /* CoreMotionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreMotionViewController.swift; sourceTree = "<group>"; };
+		63B054ED2818E3FF000C80CB /* DictationRecognitionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictationRecognitionController.swift; sourceTree = "<group>"; };
 		63D5C3F21C9980B1008DE710 /* avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = avatar.png; path = res/avatar.png; sourceTree = "<group>"; };
 		63D638DE1C901046005B1E61 /* tab_home_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tab_home_btn@2x.png"; path = "res/tab_home_btn@2x.png"; sourceTree = "<group>"; };
 		63D638DF1C901046005B1E61 /* tab_home_selected_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tab_home_selected_btn@2x.png"; path = "res/tab_home_selected_btn@2x.png"; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 				633E16AA1E039000000110F3 /* AlertViewController.swift */,
 				635BAC871FAF3F5200487870 /* ARKitViewController.swift */,
 				63272ACB2027FF95006315CD /* DataHubViewController.swift */,
+				63B054ED2818E3FF000C80CB /* DictationRecognitionController.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -570,6 +573,7 @@
 				635BAC8A1FAF3FA900487870 /* SCNVector3Extensions.swift in Sources */,
 				638317DA1CB35D5F00EF3EF5 /* mvp.swift in Sources */,
 				63894CBC1B99758F00464AB0 /* HomeViewController.swift in Sources */,
+				63B054EE2818E3FF000C80CB /* DictationRecognitionController.swift in Sources */,
 				63176F251DFD1C2F001F4106 /* UIGestureRecognizerViewController.swift in Sources */,
 				63F96D7A1C841F7200C95604 /* Const.swift in Sources */,
 				63445F501CA29969004D153F /* WKWebviewController.swift in Sources */,

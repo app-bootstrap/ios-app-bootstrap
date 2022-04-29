@@ -16,7 +16,7 @@ class LoginViewController: ViewController, UITextFieldDelegate {
         super.viewDidLoad()
         initView();
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
@@ -79,6 +79,7 @@ class LoginViewController: ViewController, UITextFieldDelegate {
         logger.info("login")
         Utils.setData("login", value: "login")
         let tabBar = TabBarController()
+        tabBar.modalPresentationStyle = .fullScreen
         self.present(tabBar, animated: true, completion: nil)
     }
     

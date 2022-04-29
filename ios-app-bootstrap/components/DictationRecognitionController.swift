@@ -6,17 +6,23 @@
 //  Copyright © 2022 open source. All rights reserved.
 //
 
-import UIKit
+import Foundation
 import Logger_swift
 
 // https://developer.apple.com/documentation/uikit/uitextinput
 
 class DictationRecognitionController: UIViewController, UITextFieldDelegate {
     let logger = Logger()
+    var textField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initView()
+        NotificationCenter.default.addObserver(self, selector: #selector(changeInputMode(sender:)), name: UITextInputMode.currentInputModeDidChangeNotification, object: nil)
+    }
+
+    @objc func changeInputMode(sender: NSNotification) {
+        logger.info("changeInputMode:", textField.textInputMode?.primaryLanguage as Any)
     }
 
     func initView() {
@@ -30,7 +36,7 @@ class DictationRecognitionController: UIViewController, UITextFieldDelegate {
         titleLabel.font = UIFont.systemFont(ofSize: 24)
         view.addSubview(titleLabel)
 
-        let textField = UITextField()
+        textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.layer.cornerRadius = 2
         textField.backgroundColor = Utils.getRGB(Const.COLOR_1)
@@ -47,4 +53,5 @@ class DictationRecognitionController: UIViewController, UITextFieldDelegate {
         view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[titleLabel]-|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: views))
         view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[textField]-|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: views))
     }
+    
 }

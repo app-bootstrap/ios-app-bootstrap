@@ -11,17 +11,40 @@ import Logger_swift
 
 // https://developer.apple.com/documentation/uikit/uitextinput
 
-class DictationRecognitionController: UIViewController {
+class DictationRecognitionController: UIViewController, UITextFieldDelegate {
     let logger = Logger()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initView()
     }
-    
+
     func initView() {
         navigationItem.title = Utils.Path.basename(#file)
         view.backgroundColor = UIColor.white
+
+        let titleLabel = UILabel()
+        titleLabel.textAlignment = .center
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.text = Const.TITLE
+        titleLabel.font = UIFont.systemFont(ofSize: 24)
+        view.addSubview(titleLabel)
+
+        let textField = UITextField()
+        textField.translatesAutoresizingMaskIntoConstraints = false
+        textField.layer.cornerRadius = 2
+        textField.backgroundColor = Utils.getRGB(Const.COLOR_1)
+        textField.layer.sublayerTransform = CATransform3DMakeTranslation(5, 0, 0)
+        textField.keyboardType = .numbersAndPunctuation
+        textField.returnKeyType = UIReturnKeyType.done
+        textField.enablesReturnKeyAutomatically = true
+        textField.delegate = self
+
+        view.addSubview(textField)
         
+        let views:Dictionary<String, AnyObject>=["titleLabel": titleLabel, "textField": textField]
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-100-[textField(<=50)]-1-[titleLabel(<=50)]-100-|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: views))
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[titleLabel]-|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: views))
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[textField]-|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: views))
     }
 }

@@ -14,7 +14,7 @@ class OtherViewController: UITableViewController {
     let list = [
       "Gesture",
       "WKWebview",
-      "DictationRecognition"
+      "DictationRecognition",
       "Toast",
       "Animation",
       "Alert",
@@ -78,7 +78,7 @@ class OtherViewController: UITableViewController {
             controller = UIGestureRecognizerViewController()
         case "WKWebview":
             controller = WKWebviewController()
-        case "DictationRecognition"
+        case "DictationRecognition":
             controller = DictationRecognitionController()
         case "Animation":
             controller = AnimationController()

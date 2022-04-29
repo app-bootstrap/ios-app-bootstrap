@@ -9,6 +9,8 @@
 import UIKit
 import Logger_swift
 
+// https://developer.apple.com/documentation/uikit/uitextinput
+
 class DictationRecognitionController: UIViewController {
     let logger = Logger()
     
@@ -20,5 +22,6 @@ class DictationRecognitionController: UIViewController {
     func initView() {
         navigationItem.title = Utils.Path.basename(#file)
         view.backgroundColor = UIColor.white
+        
     }
 }

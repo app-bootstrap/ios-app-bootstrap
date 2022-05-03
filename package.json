@@ -15,7 +15,7 @@
     "url": "git://github.com/app-bootstrap/ios-app-bootstrap.git"
   },
   "devDependencies": {
-    "macaca-datahub": "3",
+    "macaca-datahub": "4",
     "reliable-cli": "1"
   },
   "scripts": {

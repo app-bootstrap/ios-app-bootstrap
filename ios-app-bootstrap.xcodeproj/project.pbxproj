@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		0720A3729DD395CEE4EACE48 /* Pods_ios_app_bootstrap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9C8D5637E5AFA45C451B04F /* Pods_ios_app_bootstrap.framework */; };
+		630D6D5B28D1F128005CE2E3 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630D6D5A28D1F128005CE2E3 /* WidgetKit.framework */; };
+		630D6D5D28D1F128005CE2E3 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630D6D5C28D1F128005CE2E3 /* SwiftUI.framework */; };
+		630D6D6028D1F128005CE2E3 /* Widget1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630D6D5F28D1F128005CE2E3 /* Widget1.swift */; };
+		630D6D6328D1F129005CE2E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 630D6D6228D1F129005CE2E3 /* Assets.xcassets */; };
+		630D6D6528D1F129005CE2E3 /* Widget1.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 630D6D6128D1F128005CE2E3 /* Widget1.intentdefinition */; };
+		630D6D6628D1F129005CE2E3 /* Widget1.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 630D6D6128D1F128005CE2E3 /* Widget1.intentdefinition */; };
+		630D6D6928D1F129005CE2E3 /* Widget1Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 630D6D5928D1F128005CE2E3 /* Widget1Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		63176F251DFD1C2F001F4106 /* UIGestureRecognizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63176F241DFD1C2F001F4106 /* UIGestureRecognizerViewController.swift */; };
 		63272ACC2027FF95006315CD /* DataHubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63272ACB2027FF95006315CD /* DataHubViewController.swift */; };
 		633E16AB1E039000000110F3 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633E16AA1E039000000110F3 /* AlertViewController.swift */; };
@@ -52,6 +59,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		630D6D6728D1F129005CE2E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 63DA6D001B9941F600AFC15F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 630D6D5828D1F128005CE2E3;
+			remoteInfo = Widget1Extension;
+		};
 		63DA6D1E1B9941F600AFC15F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 63DA6D001B9941F600AFC15F /* Project object */;
@@ -68,10 +82,31 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		630D6D6A28D1F129005CE2E3 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				630D6D6928D1F129005CE2E3 /* Widget1Extension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		22DA0168E8CB20DA60DACFE0 /* Pods-ios-app-bootstrap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-app-bootstrap.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios-app-bootstrap/Pods-ios-app-bootstrap.release.xcconfig"; sourceTree = "<group>"; };
 		3F927839A6DCBF2028EE05C1 /* Pods-ios-app-bootstrapTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-app-bootstrapTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios-app-bootstrapTests/Pods-ios-app-bootstrapTests.release.xcconfig"; sourceTree = "<group>"; };
 		56406AA520FC2A5C00630913 /* ios-app-bootstrap-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ios-app-bootstrap-Bridging-Header.h"; sourceTree = "<group>"; };
+		630D6D5928D1F128005CE2E3 /* Widget1Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Widget1Extension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		630D6D5A28D1F128005CE2E3 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		630D6D5C28D1F128005CE2E3 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		630D6D5F28D1F128005CE2E3 /* Widget1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Widget1.swift; sourceTree = "<group>"; };
+		630D6D6128D1F128005CE2E3 /* Widget1.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Widget1.intentdefinition; sourceTree = "<group>"; };
+		630D6D6228D1F129005CE2E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		630D6D6428D1F129005CE2E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63176F241DFD1C2F001F4106 /* UIGestureRecognizerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIGestureRecognizerViewController.swift; sourceTree = "<group>"; };
 		63272ACB2027FF95006315CD /* DataHubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHubViewController.swift; sourceTree = "<group>"; };
 		633E16AA1E039000000110F3 /* AlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +161,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		630D6D5628D1F128005CE2E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				630D6D5D28D1F128005CE2E3 /* SwiftUI.framework in Frameworks */,
+				630D6D5B28D1F128005CE2E3 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		63DA6D051B9941F600AFC15F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -152,6 +196,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		630D6D5E28D1F128005CE2E3 /* Widget1 */ = {
+			isa = PBXGroup;
+			children = (
+				630D6D5F28D1F128005CE2E3 /* Widget1.swift */,
+				630D6D6128D1F128005CE2E3 /* Widget1.intentdefinition */,
+				630D6D6228D1F129005CE2E3 /* Assets.xcassets */,
+				630D6D6428D1F129005CE2E3 /* Info.plist */,
+			);
+			path = Widget1;
+			sourceTree = "<group>";
+		};
 		638317D51CB35D5500EF3EF5 /* patterns */ = {
 			isa = PBXGroup;
 			children = (
@@ -226,6 +281,7 @@
 				63DA6D0A1B9941F600AFC15F /* ios-app-bootstrap */,
 				63DA6D201B9941F600AFC15F /* ios-app-bootstrapTests */,
 				63FCC3A81FAF07800003D4D1 /* ios-app-bootstrapUITests */,
+				630D6D5E28D1F128005CE2E3 /* Widget1 */,
 				63DA6D091B9941F600AFC15F /* Products */,
 				AD71739922B4FB79986AA68F /* Pods */,
 				DEDCE96723893A1B0002E757 /* Frameworks */,
@@ -238,6 +294,7 @@
 				63DA6D081B9941F600AFC15F /* ios-app-bootstrap.app */,
 				63DA6D1D1B9941F600AFC15F /* ios-app-bootstrapTests.xctest */,
 				63FCC3A71FAF07800003D4D1 /* ios-app-bootstrapUITests.xctest */,
+				630D6D5928D1F128005CE2E3 /* Widget1Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -312,6 +369,8 @@
 				DEDCE96823893A1B0002E757 /* Pods */,
 				B9C8D5637E5AFA45C451B04F /* Pods_ios_app_bootstrap.framework */,
 				F56F7ABA044D3214718A1C22 /* Pods_ios_app_bootstrapTests.framework */,
+				630D6D5A28D1F128005CE2E3 /* WidgetKit.framework */,
+				630D6D5C28D1F128005CE2E3 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -319,6 +378,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		630D6D5828D1F128005CE2E3 /* Widget1Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 630D6D6D28D1F129005CE2E3 /* Build configuration list for PBXNativeTarget "Widget1Extension" */;
+			buildPhases = (
+				630D6D5528D1F128005CE2E3 /* Sources */,
+				630D6D5628D1F128005CE2E3 /* Frameworks */,
+				630D6D5728D1F128005CE2E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Widget1Extension;
+			productName = Widget1Extension;
+			productReference = 630D6D5928D1F128005CE2E3 /* Widget1Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		63DA6D071B9941F600AFC15F /* ios-app-bootstrap */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 63DA6D271B9941F600AFC15F /* Build configuration list for PBXNativeTarget "ios-app-bootstrap" */;
@@ -328,10 +404,12 @@
 				63DA6D051B9941F600AFC15F /* Frameworks */,
 				63DA6D061B9941F600AFC15F /* Resources */,
 				B465D0BC4A363D3511503941 /* [CP] Embed Pods Frameworks */,
+				630D6D6A28D1F129005CE2E3 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				630D6D6828D1F129005CE2E3 /* PBXTargetDependency */,
 			);
 			name = "ios-app-bootstrap";
 			productName = "ios-app-bootstrap";
@@ -382,10 +460,15 @@
 		63DA6D001B9941F600AFC15F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0910;
+				LastSwiftUpdateCheck = 1400;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "open source";
 				TargetAttributes = {
+					630D6D5828D1F128005CE2E3 = {
+						CreatedOnToolsVersion = 14.0;
+						DevelopmentTeam = D8A9Y93768;
+						ProvisioningStyle = Automatic;
+					};
 					63DA6D071B9941F600AFC15F = {
 						CreatedOnToolsVersion = 6.4;
 						DevelopmentTeam = D8A9Y93768;
@@ -422,11 +505,20 @@
 				63DA6D071B9941F600AFC15F /* ios-app-bootstrap */,
 				63DA6D1C1B9941F600AFC15F /* ios-app-bootstrapTests */,
 				63FCC3A61FAF07800003D4D1 /* ios-app-bootstrapUITests */,
+				630D6D5828D1F128005CE2E3 /* Widget1Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		630D6D5728D1F128005CE2E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				630D6D6328D1F129005CE2E3 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		63DA6D061B9941F600AFC15F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -550,6 +642,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		630D6D5528D1F128005CE2E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				630D6D6528D1F129005CE2E3 /* Widget1.intentdefinition in Sources */,
+				630D6D6028D1F128005CE2E3 /* Widget1.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		63DA6D041B9941F600AFC15F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -559,6 +660,7 @@
 				633E16AB1E039000000110F3 /* AlertViewController.swift in Sources */,
 				63894CC01B99782700464AB0 /* Utils.swift in Sources */,
 				63445F4E1CA295E5004D153F /* OtherViewController.swift in Sources */,
+				630D6D6628D1F129005CE2E3 /* Widget1.intentdefinition in Sources */,
 				638317D91CB35D5F00EF3EF5 /* mvc.swift in Sources */,
 				63D638EB1C90394C005B1E61 /* WebViewController.swift in Sources */,
 				63894CB91B99736400464AB0 /* TabBarController.swift in Sources */,
@@ -602,6 +704,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		630D6D6828D1F129005CE2E3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 630D6D5828D1F128005CE2E3 /* Widget1Extension */;
+			targetProxy = 630D6D6728D1F129005CE2E3 /* PBXContainerItemProxy */;
+		};
 		63DA6D1F1B9941F600AFC15F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 63DA6D071B9941F600AFC15F /* ios-app-bootstrap */;
@@ -634,6 +741,75 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		630D6D6B28D1F129005CE2E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = D8A9Y93768;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Widget1/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Widget1;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2022 open source. All rights reserved.";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "xudafeng.ios-app-bootstrap.Widget1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		630D6D6C28D1F129005CE2E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D8A9Y93768;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Widget1/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Widget1;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2022 open source. All rights reserved.";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "xudafeng.ios-app-bootstrap.Widget1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		63DA6D251B9941F600AFC15F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -741,6 +917,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DFE987302E872537DB7027D9 /* Pods-ios-app-bootstrap.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = D8A9Y93768;
@@ -763,6 +940,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 22DA0168E8CB20DA60DACFE0 /* Pods-ios-app-bootstrap.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = D8A9Y93768;
@@ -886,6 +1064,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		630D6D6D28D1F129005CE2E3 /* Build configuration list for PBXNativeTarget "Widget1Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				630D6D6B28D1F129005CE2E3 /* Debug */,
+				630D6D6C28D1F129005CE2E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		63DA6D031B9941F600AFC15F /* Build configuration list for PBXProject "ios-app-bootstrap" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

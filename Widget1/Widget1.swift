@@ -22,14 +22,10 @@ struct Provider: IntentTimelineProvider {
 
     func getTimeline(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
         var entries: [Simple1Entry] = []
-
-        // Generate a timeline consisting of five entries an hour apart, starting from the current date.
         let currentDate = Date()
-        for hourOffset in 0 ..< 5 {
-            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = Simple1Entry(date: entryDate, configuration: configuration)
-            entries.append(entry)
-        }
+        let entryDate = Calendar.current.date(byAdding: .hour, value: 0, to: currentDate)!
+        let entry = Simple1Entry(date: entryDate, configuration: configuration)
+        entries.append(entry)
 
         let timeline = Timeline(entries: entries, policy: .atEnd)
         completion(timeline)
@@ -46,16 +42,17 @@ struct Widget1EntryView : View {
 
     var body: some View {
         Text(entry.date, style: .time)
+        Text("string demo")
     }
 }
 
 @main
 struct Widget1: Widget {
-    let kind: String = "Widget1"
+    let kind: String = "Widget2"
 
     var body: some WidgetConfiguration {
-        IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
-            Widget1EntryView(entry: entry)
+        IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) {
+            entry in Widget1EntryView(entry: entry)
         }
         .configurationDisplayName("My Widget")
         .description("This is an sample1 widget.")

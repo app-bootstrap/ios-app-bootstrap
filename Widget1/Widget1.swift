@@ -50,12 +50,21 @@ struct Widget1EntryView : View {
 struct Widget1: Widget {
     let kind: String = "Widget1"
 
+    private var supportedFamilies: [WidgetFamily] {
+        var supportedFamilies: [WidgetFamily] = [.systemSmall, .systemMedium]
+        if #available(iOSApplicationExtension 16.0, *) {
+            supportedFamilies.append(.accessoryRectangular)
+        }
+        return supportedFamilies
+    }
+
     var body: some WidgetConfiguration {
         IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) {
             entry in Widget1EntryView(entry: entry)
         }
         .configurationDisplayName("My Widget")
         .description("This is an sample1 widget.")
+        .supportedFamilies(supportedFamilies)
     }
 }
 

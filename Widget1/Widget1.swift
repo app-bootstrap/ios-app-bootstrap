@@ -48,7 +48,7 @@ struct Widget1EntryView : View {
 
 @main
 struct Widget1: Widget {
-    let kind: String = "Widget2"
+    let kind: String = "Widget1"
 
     var body: some WidgetConfiguration {
         IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) {

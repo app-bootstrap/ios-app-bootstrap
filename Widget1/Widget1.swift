@@ -38,12 +38,54 @@ struct Simple1Entry: TimelineEntry {
 }
 
 struct Widget1EntryView : View {
+    @Environment(\.widgetFamily) var family
     var entry: Provider.Entry
 
     var body: some View {
-        Text(entry.date, style: .time)
-        Text("string demo")
+        switch family {
+        case .systemSmall:
+            Text("Not implemented")
+        case .accessoryRectangular:
+            VStack(alignment: .leading, spacing: 0) {
+                HStack(spacing: 0) {
+                    Image("Icon")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(height: 14)
+                        .padding(.top, 2)
+                    Text("文字文字")
+                        .font(.system(size: 14, weight: .semibold))
+                        .padding(.leading, 8)
+                }.padding(.horizontal, 6)
+                Spacer()
+                HStack(spacing: 0) {
+                    Text("01")
+                        .font(.system(size: 20, weight: .bold, design: .default))
+                    Text("文字二")
+                        .font(.system(size: 12, weight: .regular))
+                        .frame(minWidth: 38)
+                        .padding(.leading, 3)
+                        .padding(.top, 2)
+                    Spacer()
+                    Text("11")
+                        .font(.system(size: 20, weight: .bold, design: .default))
+                    Text("文字三")
+                        .font(.system(size: 12, weight: .regular))
+                        .frame(minWidth: 38)
+                        .padding(.leading, 3)
+                        .padding(.top, 2)
+                }.padding(.horizontal, 6)
+            }
+            .padding(.vertical, 8)
+            .edgesIgnoringSafeArea(.all)
+            .background(Color.clear)
+            .cornerRadius(16)
+
+        default:
+            Text("Not implemented")
+        }
     }
+    
 }
 
 @main
